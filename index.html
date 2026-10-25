@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://vitrineatlas.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitrine Atlas">
+<meta property="og:title" content="Vitrine Atlas · Sites web pour commerces et professionnels">
+<meta property="og:description" content="Des sites rapides sur téléphone, en ligne en 7 jours. Maquette gratuite avant de payer. Basés à Casablanca.">
+<meta property="og:url" content="https://vitrineatlas.com/">
+<meta property="og:image" content="https://vitrineatlas.com/share/vitrine-atlas.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vitrine Atlas","url":"https://vitrineatlas.com/","logo":"https://vitrineatlas.com/icon-192.png","image":"https://vitrineatlas.com/share/vitrine-atlas.jpg","description":"Création de sites web pour commerces et professionnels francophones.","email":"contact@vitrineatlas.com","telephone":"+212663892173","address":{"@type":"PostalAddress","addressLocality":"Casablanca","addressCountry":"MA"},"areaServed":["MA","FR","BE","CH","CA"],"knowsLanguage":["fr","ar"],"sameAs":["https://www.facebook.com/profile.php?id=61595675529684","https://www.instagram.com/vitrineatlas/"]}</script>
+<title>Vitrine Atlas</title>
+<meta name="description" content="Vitrine Atlas crée des sites web rapides et soignés pour les commerces et professionnels francophones, livrés en 7 jours, avec une maquette gratuite avant de payer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: agency one-pager. Centred hero with laptop + phone frames showing real work, a storefront-and-Atlas logo,
+   portfolio, inclusions grid, price cards with a Europe/Maroc switch, 7-day method, FAQ, contact composer.
+   Palette: electric blue + cyan accent on white. */
+:root{
+  --bg:#FFFFFF; --surface:#F6F8FD; --ink:#0B1222; --muted:#56607A; --line:#E1E7F3;
+  --forest:#1D4ED8; --forest-2:#2563EB; --on-forest:#FFFFFF; --forest-muted:#D6E2FF;
+  --lime:#2563EB; --lime-ink:#FFFFFF; --lime-soft:#E7EEFF; --mint-soft:#ECFBFE;
+  --cyan:#22D3EE; --cyan-ink:#062B33; --frame:#0B1222;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#070B16; --surface:#0F1526; --ink:#E7ECF8; --muted:#9AA6C2; --line:#1E2840;
+    --forest:#1E3A8A; --forest-2:#2563EB; --on-forest:#F3F6FF; --forest-muted:#BFD0FF;
+    --lime:#3B82F6; --lime-ink:#FFFFFF; --lime-soft:#14213F; --mint-soft:#0B2A33;
+    --cyan:#22D3EE; --cyan-ink:#062B33; --frame:#1A2238; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#070B16; --surface:#0F1526; --ink:#E7ECF8; --muted:#9AA6C2; --line:#1E2840;
+    --forest:#1E3A8A; --forest-2:#2563EB; --on-forest:#F3F6FF; --forest-muted:#BFD0FF;
+    --lime:#3B82F6; --lime-ink:#FFFFFF; --lime-soft:#14213F; --mint-soft:#0B2A33;
+    --cyan:#22D3EE; --cyan-ink:#062B33; --frame:#1A2238; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:80px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.62}
+.wrap{max-width:1160px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display); font-weight:800; line-height:1.04; letter-spacing:-.025em; text-wrap:balance; margin:0}
+h3{font-weight:700; letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+img{display:block; max-width:100%}
+svg{display:block}
+:focus-visible{outline:3px solid var(--cyan); outline-offset:2px; border-radius:8px}
+
+header.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; background:color-mix(in srgb, var(--bg) 86%, transparent); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-bottom:1px solid var(--line)}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:41; background:var(--bg)}
+header.top .wrap{display:flex; align-items:center; justify-content:space-between; gap:14px; padding-block:12px}
+.logo{display:flex; align-items:center; gap:10px; text-decoration:none; font:800 21px var(--display); letter-spacing:-.02em; white-space:nowrap}
+.logo svg{width:36px; height:36px; flex:none}
+.logo .w{color:var(--forest-2)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo .w{color:var(--lime)} }
+:root[data-theme="dark"] .logo .w{color:var(--lime)}
+nav.links{display:none; gap:28px; font-weight:700; font-size:15px}
+nav.links a{text-decoration:none; color:var(--muted)} nav.links a:hover{color:var(--ink)}
+@media (min-width:900px){ nav.links{display:flex} }
+@media (max-width:440px){ header.top .logo{font-size:18px; gap:8px} header.top .logo svg{width:30px; height:30px} header.top .btn-sm{padding:0 12px; font-size:14px} }
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:52px; padding:0 24px; border-radius:14px; font:800 16px var(--body); text-decoration:none; border:0; cursor:pointer; white-space:nowrap}
+.btn svg{width:18px; height:18px; flex:none}
+.btn-lime{background:var(--lime); color:var(--lime-ink)}
+.btn-forest{background:var(--forest); color:var(--on-forest)}
+.btn-line{background:var(--surface); color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-sm{min-height:42px; padding:0 16px; font-size:15px; border-radius:12px}
+.btn:hover{filter:brightness(1.05)}
+@media (prefers-reduced-motion: no-preference){ .btn{transition:transform .15s, filter .15s} .btn:active{transform:scale(.98)} }
+
+/* hero */
+.hero .wrap{display:flex; flex-direction:column; align-items:center; text-align:center; padding-block:52px 0}
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--forest-2); background:var(--lime-soft); border-radius:99px; padding:6px 14px}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .eyebrow{color:var(--lime)} }
+:root[data-theme="dark"] .eyebrow{color:var(--lime)}
+.hero h1{font-size:clamp(40px, 7.4vw, 88px); margin-top:22px; max-width:14ch}
+.hero h1 .mark{color:var(--forest-2); background:linear-gradient(transparent 84%, var(--cyan) 84% 96%, transparent 96%); padding:0 .04em}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hero h1 .mark{color:var(--lime)} }
+:root[data-theme="dark"] .hero h1 .mark{color:var(--lime)}
+.hero .lead{font-size:19.5px; color:var(--muted); max-width:56ch; margin-top:20px}
+.cta{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:30px}
+.proof{display:flex; flex-wrap:wrap; gap:10px 26px; justify-content:center; margin-top:26px; font-size:15px; font-weight:700; color:var(--muted)}
+.proof span{display:inline-flex; align-items:center; gap:8px}
+.proof svg{width:18px; height:18px; color:var(--forest-2)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .proof svg{color:var(--lime)} }
+:root[data-theme="dark"] .proof svg{color:var(--lime)}
+
+.devices{position:relative; width:100%; max-width:980px; margin-top:52px; padding-bottom:30px}
+.laptop{width:86%; margin-inline-end:auto; background:var(--frame); border-radius:18px 18px 6px 6px; padding:12px 12px 0; box-shadow:0 40px 80px -50px rgba(37,99,235,.7)}
+.laptop .bar{display:flex; gap:6px; padding:0 4px 10px}
+.laptop .bar i{width:9px; height:9px; border-radius:50%; background:#5B6B8F}
+.laptop .scr{aspect-ratio:16/10; max-width:100%; border-radius:8px 8px 0 0; overflow:hidden; background:var(--surface)}
+.laptop .scr img{width:100%; height:100%; object-fit:cover; object-position:top}
+.base{width:94%; height:16px; margin-inline-end:auto; margin-inline-start:-4%; background:linear-gradient(#2A3552, var(--frame)); border-radius:0 0 18px 18px}
+.phone{position:absolute; inset-inline-end:0; bottom:0; width:24%; min-width:120px; background:var(--frame); border-radius:30px; padding:8px; box-shadow:0 30px 60px -30px rgba(11,18,34,.6)}
+.phone .scr{aspect-ratio:390/844; max-width:100%; border-radius:23px; overflow:hidden; background:var(--surface)}
+.phone .scr img{width:100%; height:100%; object-fit:cover; object-position:top}
+.tagline{position:absolute; inset-inline-start:2%; bottom:-6px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:9px 13px; font-size:13.5px; font-weight:700; display:flex; gap:8px; align-items:center; box-shadow:0 16px 36px -24px rgba(11,18,34,.5); max-width:70%; text-align:start}
+.tagline i{width:9px; height:9px; border-radius:50%; background:var(--cyan); flex:none; box-shadow:0 0 0 3px var(--mint-soft)}
+
+section.block .wrap{padding-block:84px}
+.head{display:grid; gap:12px; justify-items:center; text-align:center; max-width:64ch; margin:0 auto 44px}
+.head h2{font-size:clamp(32px, 5vw, 54px)}
+.head p{color:var(--muted); font-size:18.5px}
+
+.why{display:grid; gap:14px; grid-template-columns:1fr}
+@media (min-width:860px){ .why{grid-template-columns:repeat(3,1fr)} }
+.why article{background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:26px; display:grid; gap:10px; align-content:start}
+.why .big{font:800 46px/1 var(--display); color:var(--forest-2); letter-spacing:-.03em}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .why .big{color:var(--lime)} }
+:root[data-theme="dark"] .why .big{color:var(--lime)}
+.why h3{font-size:21px}
+.why p{color:var(--muted); font-size:16px}
+
+.dark-band{background:linear-gradient(140deg, var(--forest), var(--forest-2)); color:var(--on-forest)}
+.dark-band .btn-lime{background:var(--on-forest); color:var(--forest)}
+.dark-band .head p{color:var(--forest-muted)}
+.dark-band .eyebrow{background:color-mix(in srgb, var(--on-forest) 16%, transparent); color:var(--on-forest)}
+.works{display:grid; gap:18px; grid-template-columns:1fr}
+@media (min-width:900px){ .works{grid-template-columns:1fr 1fr} }
+.work{background:color-mix(in srgb, var(--on-forest) 6%, transparent); border:1px solid color-mix(in srgb, var(--on-forest) 14%, transparent); border-radius:26px; padding:14px; display:flex; flex-direction:column; gap:16px}
+.work .shot{border-radius:16px; overflow:hidden; aspect-ratio:16/10; max-width:100%; background:var(--surface)}
+.work .shot img{width:100%; height:100%; object-fit:cover; object-position:top}
+.work .tx{padding:0 8px 8px; display:grid; gap:10px}
+.work .meta{display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:13px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--forest-muted)}
+.work .meta .st{background:var(--cyan); color:var(--cyan-ink); border-radius:99px; padding:3px 10px; letter-spacing:.02em}
+.work h3{font-size:25px}
+.work p{color:var(--forest-muted); font-size:16px}
+.work ul{margin:4px 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px}
+.work li{font-size:13.5px; font-weight:700; border:1px solid color-mix(in srgb, var(--on-forest) 22%, transparent); border-radius:99px; padding:4px 11px}
+.demos{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:760px){ .demos{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.demo{background:color-mix(in srgb, var(--on-forest) 6%, transparent); border:1px solid color-mix(in srgb, var(--on-forest) 14%, transparent); border-radius:26px; padding:12px; display:flex; flex-direction:column; gap:14px}
+.demo .shot{display:block; border-radius:16px; overflow:hidden; aspect-ratio:16/10; max-width:100%; background:var(--surface)}
+.demo .shot img{width:100%; height:100%; object-fit:cover; object-position:top}
+@media (prefers-reduced-motion: no-preference){ .demo .shot img{transition:transform .6s} .demo .shot:hover img{transform:scale(1.03)} }
+.demo .tx{padding:4px 8px 10px; display:flex; flex-direction:column; gap:10px; flex:1}
+.demo .meta{display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; font-size:13px; font-weight:700; color:var(--forest-muted)}
+.demo .meta .st{background:var(--cyan); color:var(--cyan-ink); border-radius:99px; padding:3px 11px; font-weight:800}
+.demo h3{font-size:25px}
+.demo p{color:var(--forest-muted); font-size:16px}
+.demo ul{margin:2px 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px}
+.demo li{font-size:13.5px; font-weight:700; border:1px solid color-mix(in srgb, var(--on-forest) 22%, transparent); border-radius:99px; padding:4px 11px}
+.demo .btn{align-self:flex-start; margin-top:auto}
+.demo.ask{border-style:dashed; border-width:1.5px; justify-content:center; padding:26px}
+.demo.ask h3{font-size:30px}
+.demo.ask .btn{white-space:normal; text-align:center; height:auto; padding-block:12px}
+.next{margin-top:18px; border:1.5px dashed color-mix(in srgb, var(--on-forest) 30%, transparent); border-radius:22px; padding:22px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between}
+.next b{font:800 22px var(--display)}
+.next p{color:var(--forest-muted); font-size:16px}
+
+.incl{display:grid; gap:12px; grid-template-columns:1fr}
+@media (min-width:640px){ .incl{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .incl{grid-template-columns:repeat(4,1fr)} }
+.inc{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:20px; display:grid; gap:8px; align-content:start}
+.inc .ic{width:42px; height:42px; border-radius:12px; background:var(--lime-soft); color:var(--forest-2); display:grid; place-items:center}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .inc .ic{color:var(--lime)} }
+:root[data-theme="dark"] .inc .ic{color:var(--lime)}
+.inc .ic svg{width:21px; height:21px}
+.inc h3{font-size:18px}
+.inc p{color:var(--muted); font-size:15px}
+
+.switch{display:inline-flex; background:var(--surface); border:1.5px solid var(--line); border-radius:14px; padding:4px; gap:4px}
+.switch button{border:0; background:transparent; color:var(--muted); font:800 15px var(--body); padding:10px 18px; border-radius:10px; cursor:pointer; min-height:42px}
+.switch button[aria-pressed="true"]{background:var(--forest); color:var(--on-forest)}
+.prices{display:grid; gap:16px; grid-template-columns:1fr; margin-top:28px}
+@media (min-width:900px){ .prices{grid-template-columns:repeat(3,1fr); align-items:stretch} }
+.plan{background:var(--surface); border:1.5px solid var(--line); border-radius:24px; padding:26px; display:flex; flex-direction:column; gap:14px}
+.plan.star{border-color:var(--forest-2); box-shadow:0 30px 60px -40px rgba(37,99,235,.65)}
+.plan .badge{align-self:flex-start; background:var(--cyan); color:var(--cyan-ink); font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:4px 11px; border-radius:99px}
+.plan h3{font-size:22px}
+.plan .desc{color:var(--muted); font-size:15.5px}
+.amount{font:800 46px/1 var(--display); letter-spacing:-.03em; font-variant-numeric:tabular-nums}
+.amount small{font:700 15px var(--body); color:var(--muted); letter-spacing:0}
+.amount .was{display:block; font:700 18px var(--body); color:var(--muted); letter-spacing:0; margin-bottom:6px}
+.amount .was[hidden]{display:none}
+.launch{margin:24px auto 0; max-width:640px; text-align:center; background:var(--mint-soft); border:1.5px solid var(--cyan); border-radius:14px; padding:12px 16px; font-size:15.5px}
+.launch b{color:var(--forest-2)}
+.plan ul{margin:0; padding:0; list-style:none; display:grid; gap:9px; font-size:15.5px}
+.plan li{display:grid; grid-template-columns:20px 1fr; gap:8px}
+.plan li::before{content:""; width:16px; height:16px; margin-top:4px; border-radius:50%; background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.plan .btn{margin-top:auto}
+.pnote{margin-top:18px; text-align:center; color:var(--muted); font-size:15px}
+
+.steps{display:grid; gap:14px; grid-template-columns:1fr}
+@media (min-width:820px){ .steps{grid-template-columns:repeat(4,1fr)} }
+.step{border-top:3px solid var(--forest-2); padding-top:16px; display:grid; gap:6px; align-content:start}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .step{border-color:var(--lime)} }
+:root[data-theme="dark"] .step{border-color:var(--lime)}
+.step .day{font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.step h3{font-size:21px}
+.step p{color:var(--muted); font-size:16px}
+
+.faqs{display:grid; gap:10px; max-width:860px; margin:0 auto}
+details{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:18px 20px}
+summary{cursor:pointer; list-style:none; font-weight:800; font-size:17.5px; display:flex; justify-content:space-between; gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; font:800 24px/1 var(--display); color:var(--forest-2); flex:none}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) summary::after{color:var(--lime)} }
+:root[data-theme="dark"] summary::after{color:var(--lime)}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted); margin-top:10px}
+
+.contact{background:linear-gradient(140deg, var(--forest), var(--forest-2)); color:var(--on-forest)}
+.contact .grid{display:grid; gap:28px}
+@media (min-width:900px){ .contact .grid{grid-template-columns:.9fr 1.1fr; align-items:start} }
+.contact h2{font-size:clamp(32px, 4.6vw, 50px)}
+.contact .sub{color:var(--forest-muted); margin-top:14px; max-width:44ch}
+.ways{display:grid; gap:10px; margin-top:24px}
+.way{display:flex; gap:12px; align-items:center; flex-wrap:wrap; background:color-mix(in srgb, var(--on-forest) 7%, transparent); border-radius:16px; padding:12px 14px}
+.way span{color:var(--forest-muted); font-size:14px}
+.way code{font:800 17px var(--body); user-select:all; direction:ltr; unicode-bidi:isolate}
+.todo{display:inline-block; font-size:12px; font-weight:800; background:var(--cyan); color:var(--cyan-ink); border-radius:99px; padding:2px 9px}
+form{display:grid; gap:14px; background:var(--surface); color:var(--ink); border-radius:24px; padding:22px}
+.field{display:grid; gap:7px}
+.field label{font-weight:800; font-size:14px}
+.field input,.field select,.field textarea{font:600 16px var(--body); color:var(--ink); background:var(--bg); border:1.5px solid var(--line); border-radius:14px; padding:13px 14px; width:100%}
+.field textarea{min-height:90px; resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none; border-color:var(--forest-2); box-shadow:0 0 0 3px var(--lime-soft)}
+.two{display:grid; gap:14px} @media (min-width:560px){ .two{grid-template-columns:1fr 1fr} }
+.out{display:grid; gap:8px; background:var(--lime-soft); border-radius:16px; padding:14px}
+.out pre{margin:0; white-space:pre-wrap; font:600 14.5px/1.55 var(--body)}
+.out .acts{display:flex; flex-wrap:wrap; gap:8px}
+.note{font-size:13px; color:var(--muted)}
+
+footer .soc{display:flex; gap:10px}
+footer .soc a{width:40px; height:40px; border-radius:12px; display:grid; place-items:center; background:var(--surface); border:1px solid var(--line); color:var(--ink)}
+footer .soc a:hover{color:var(--forest-2)}
+footer .soc svg{width:20px; height:20px}
+.way .sl{display:inline-flex; align-items:center; gap:7px; font-weight:800; color:var(--on-forest); text-decoration:none; background:color-mix(in srgb, var(--on-forest) 12%, transparent); border-radius:99px; padding:6px 12px}
+.way .sl:hover{background:color-mix(in srgb, var(--on-forest) 22%, transparent)}
+.way .sl svg{width:17px; height:17px}
+footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; align-items:center; color:var(--muted); font-size:14.5px}
+</style>
+<style>html{-webkit-text-size-adjust:100%;text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 40 40"><rect x="4" y="6" width="32" height="29" rx="7" fill="var(--forest-2)"/><rect x="9" y="12" width="22" height="17" rx="3" fill="var(--on-forest)"/><path d="M9 29l7-9 4 5 4-6 7 10z" fill="var(--cyan)"/><path d="M16 20l2 2.6M24 19l1.8 2.6" stroke="var(--on-forest)" stroke-width="1.4" stroke-linecap="round"/><circle cx="26.5" cy="16" r="1.8" fill="var(--forest-2)"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.3 12.2l2.5 2.5 4.9-5"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="6.5" y="2.8" width="11" height="18.4" rx="2.6"/><path d="M10.5 18h3" stroke-linecap="round"/></g></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.6"/><path d="M3.6 12h16.8M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6S9.6 5.8 12 3.4z"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 19.5l1.3-3.6A8 8 0 1 1 8.4 19z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 21s-6.5-6.4-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.6 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M13 2.8L5 13.5h6l-1 7.7 8-10.7h-6z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.2 4.2"/></g></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="8" cy="15" r="4.2"/><path d="M11 12l8.5-8.5M16.5 6.5l2.5 2.5M14 9l2 2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M7 18.5h10.2a4.3 4.3 0 0 0 .5-8.6 6 6 0 0 0-11.5 1.6A3.6 3.6 0 0 0 7 18.5z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></g></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></g></symbol>
+</svg>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#haut" aria-label="Vitrine Atlas, accueil"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a>
+  <nav class="links" aria-label="Sections"><a href="#realisations">Exemples</a><a href="#inclus">Inclus</a><a href="#tarifs">Tarifs</a><a href="#methode">Méthode</a><a href="#questions">Questions</a></nav>
+  <a class="btn btn-lime btn-sm" href="#contact">Maquette gratuite</a>
+</div></header>
+
+<section class="hero" id="haut"><div class="wrap">
+  <p class="eyebrow">Sites web pour commerces et professionnels</p>
+  <h1>Votre commerce mérite <span class="mark">une vitrine sur le web.</span></h1>
+  <p class="lead">Nous créons des sites clairs, rapides sur téléphone et faciles à contacter, pour les artisans, cabinets et commerces francophones. Vous voyez une maquette de votre site avant de payer quoi que ce soit.</p>
+  <div class="cta">
+    <a class="btn btn-lime" href="#contact">Recevoir ma maquette gratuite<svg><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-line" href="#realisations">Voir des exemples</a>
+  </div>
+  <div class="proof">
+    <span><svg><use href="#i-check"/></svg>Maquette gratuite</span>
+    <span><svg><use href="#i-check"/></svg>En ligne en 7 jours</span>
+    <span><svg><use href="#i-check"/></svg>Le site vous appartient</span>
+  </div>
+  <div class="devices" aria-hidden="true">
+    <div class="laptop"><div class="bar"><i></i><i></i><i></i></div><div class="scr"><img src="demos/img/shot-riad.webp" width="1200" height="750" alt="" decoding="async" fetchpriority="high"></div></div>
+    <div class="base"></div>
+    <div class="phone"><div class="scr"><img src="demos/img/shot-restaurant-m.webp" width="390" height="844" alt="" decoding="async"></div></div>
+    <div class="tagline"><i></i>Exemples : riad à Marrakech et restaurant à Casablanca</div>
+  </div>
+</div></section>
+
+<section class="block" id="pourquoi"><div class="wrap">
+  <div class="head"><p class="eyebrow">Pourquoi un site</p><h2>Vos clients vous cherchent d’abord sur leur téléphone</h2><p>Une fiche Google ou une page Facebook ne suffit plus pour inspirer confiance et transformer une visite en appel.</p></div>
+  <div class="why">
+    <article><span class="big">1</span><h3>Le client compare avant d’appeler</h3><p>Il ouvre deux ou trois résultats. Celui qui présente clairement ses services, ses horaires et son adresse gagne l’appel.</p></article>
+    <article><span class="big">2</span><h3>Un site rassure</h3><p>Sans site, un nouveau client ne sait pas si vous êtes sérieux. Un site soigné répond à cette question avant le premier contact.</p></article>
+    <article><span class="big">3</span><h3>Il travaille pendant que vous travaillez</h3><p>Demandes de rendez-vous et de devis arrivent sur WhatsApp ou par e-mail, même quand vous êtes occupé.</p></article>
+  </div>
+</div></section>
+
+<section class="block dark-band" id="realisations"><div class="wrap">
+  <div class="head"><p class="eyebrow">Exemples par métier</p><h2>Imaginez votre commerce ici</h2><p>Sept sites de démonstration, un par métier, chacun avec son style et ses fonctions. Ouvrez-les sur votre téléphone : tout fonctionne. Les commerces présentés sont fictifs.</p></div>
+  <div class="demos">
+    <article class="demo">
+      <a class="shot" href="demos/riad.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Riad Dar Yasmine"><img src="demos/img/shot-riad.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Riad Dar Yasmine"></a>
+      <div class="tx"><p class="meta"><span class="st">Riad / maison d’hôtes</span><span>Marrakech · terre cuite et zellige</span></p><h3>Riad Dar Yasmine</h3><p>Chambres avec prix, table d’hôtes, expériences et réservation par dates.</p>
+      <ul><li>Réservation par dates</li><li>Arabe et français</li><li>Accès dans la médina</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/riad.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/restaurant.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Dar Zitoun"><img src="demos/img/shot-restaurant.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Dar Zitoun"></a>
+      <div class="tx"><p class="meta"><span class="st">Restaurant / café</span><span>Casablanca · ambiance sombre et safran</span></p><h3>Dar Zitoun</h3><p>Plats signatures, carte en onglets, réservation de table et commande WhatsApp.</p>
+      <ul><li>Carte en ligne</li><li>Réservation de table</li><li>Ouvert / fermé en direct</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/restaurant.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/hotel.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Hôtel Bahia Palms"><img src="demos/img/shot-hotel.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Hôtel Bahia Palms"></a>
+      <div class="tx"><p class="meta"><span class="st">Hôtel</span><span>Agadir · bleu nuit et or</span></p><h3>Hôtel Bahia Palms</h3><p>Grande photo plein écran, moteur de dates, chambres avec tarifs et services.</p>
+      <ul><li>Calcul des nuits</li><li>Chambres &amp; tarifs</li><li>Réservation directe</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/hotel.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/beaute.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Maison Nour"><img src="demos/img/shot-beaute.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Maison Nour"></a>
+      <div class="tx"><p class="meta"><span class="st">Salon de beauté</span><span>Casablanca · rose poudré et noir</span></p><h3>Maison Nour</h3><p>Tarifs par catégorie, forfait mariée et réservation avec jours et créneaux.</p>
+      <ul><li>Prise de rendez-vous</li><li>Grille de tarifs</li><li>Créneaux disponibles</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/beaute.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/immobilier.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Dar Sakan Immobilier"><img src="demos/img/shot-immobilier.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Dar Sakan Immobilier"></a>
+      <div class="tx"><p class="meta"><span class="st">Agence immobilière</span><span>Casablanca, Rabat, Marrakech · vert et laiton</span></p><h3>Dar Sakan Immobilier</h3><p>Recherche par ville, type et budget, fiches des biens, estimation gratuite.</p>
+      <ul><li>Recherche de biens</li><li>Favoris</li><li>Formulaire d’estimation</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/immobilier.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/clinique.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Centre Médical Al Amal"><img src="demos/img/shot-clinique.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Centre Médical Al Amal"></a>
+      <div class="tx"><p class="meta"><span class="st">Clinique / centre médical</span><span>Casablanca · bleu canard rassurant</span></p><h3>Centre Médical Al Amal</h3><p>Spécialités, plateau technique en onglets, médecins et prise de rendez-vous.</p>
+      <ul><li>Rendez-vous en ligne</li><li>Urgences en évidence</li><li>Mutuelles acceptées</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/clinique.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo">
+      <a class="shot" href="demos/opticien.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Optique Lumière"><img src="demos/img/shot-opticien.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Optique Lumière"></a>
+      <div class="tx"><p class="meta"><span class="st">Opticien</span><span>Casablanca · crème et vermillon</span></p><h3>Optique Lumière</h3><p>Montures filtrables, contrôle de la vue, atelier et réservation de créneau.</p>
+      <ul><li>Filtres montures</li><li>Créneaux de RDV</li><li>Horaires en direct</li></ul>
+      <a class="btn btn-lime btn-sm" href="demos/opticien.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+    <article class="demo ask">
+      <div class="tx"><p class="meta"><span class="st">Votre métier</span></p><h3>Vous ne voyez pas votre activité&nbsp;?</h3><p>Auto-école, garage, avocat, architecte, boutique, salle de sport, traiteur… Envoyez-nous le nom de votre commerce : nous préparons une maquette gratuite à votre image.</p>
+      <a class="btn btn-lime" href="#contact">Recevoir ma maquette gratuite<svg><use href="#i-arrow"/></svg></a></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="block" id="inclus"><div class="wrap">
+  <div class="head"><p class="eyebrow">Inclus dans chaque site</p><h2>Tout ce qu’il faut, rien de superflu</h2></div>
+  <div class="incl">
+    <div class="inc"><span class="ic"><svg><use href="#i-phone"/></svg></span><h3>Pensé pour le téléphone</h3><p>Lisible d’une main, avec les boutons Appeler et Contacter toujours visibles.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-chat"/></svg></span><h3>Contact par WhatsApp</h3><p>Le visiteur remplit trois champs, le message arrive prêt sur votre téléphone.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-pin"/></svg></span><h3>Itinéraire en un clic</h3><p>Boutons Google Maps et Waze, adresse claire, étage et repères.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-lang"/></svg></span><h3>Bilingue sur demande</h3><p>Français et arabe, ou français et anglais, avec un bouton pour changer de langue.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-bolt"/></svg></span><h3>Rapide à charger</h3><p>Pas de thème lourd : la page s’affiche presque instantanément, même en 4G.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-search"/></svg></span><h3>Prêt pour Google</h3><p>Titres, descriptions et informations structurées pour aider Google à vous comprendre.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-cloud"/></svg></span><h3>Hébergement sécurisé</h3><p>Site en https, sauvegardé, sans maintenance technique pour vous.</p></div>
+    <div class="inc"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Le site vous appartient</h3><p>Vous recevez tous les fichiers et accès, même si vous arrêtez l’entretien.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="tarifs" style="padding-top:0"><div class="wrap">
+  <div class="head"><p class="eyebrow">Tarifs</p><h2>Des prix clairs, sans surprise</h2><p>Paiement en deux fois : 50 % à la validation de la maquette, 50 % à la mise en ligne.</p>
+    <div class="switch" role="group" aria-label="Région des tarifs"><button type="button" id="r-eu" aria-pressed="true">Europe et Canada</button><button type="button" id="r-ma" aria-pressed="false">Maroc</button></div>
+  </div>
+  <p class="launch" id="launch" hidden><b>Offre de lancement</b> réservée à nos 5 premiers clients au Maroc. Prix normaux&nbsp;: 3&nbsp;500&nbsp;dh, 6&nbsp;000&nbsp;dh et 300&nbsp;dh par mois.</p>
+  <div class="prices">
+    <article class="plan"><h3>Essentiel</h3><p class="desc">Un site d’une page pour être trouvé et contacté.</p>
+      <p class="amount"><s class="was" data-ma-was="3 500 dh" hidden></s><span data-eu="590 €" data-ma="1 990 dh">590 €</span> <small>une fois</small></p>
+      <ul><li>Site une page sur mesure</li><li>Services, horaires, carte et contact</li><li>Bouton d’appel et WhatsApp</li><li>Formulaire de contact simple</li><li>En ligne en 7 jours</li></ul>
+      <a class="btn btn-line" href="#contact" data-plan="Essentiel">Choisir Essentiel</a></article>
+    <article class="plan star"><span class="badge">Le plus choisi</span><h3>Complet</h3><p class="desc">Pour présenter chaque service et recevoir des demandes en ligne.</p>
+      <p class="amount"><s class="was" data-ma-was="6 000 dh" hidden></s><span data-eu="890 €" data-ma="3 990 dh">890 €</span> <small>une fois</small></p>
+      <ul><li>Jusqu’à 5 pages ou sections détaillées</li><li>Formulaire avancé : rendez-vous, créneaux ou devis</li><li>Deuxième langue incluse</li><li>Optimisation de votre fiche Google</li><li>Nom de domaine offert la 1re année</li></ul>
+      <a class="btn btn-forest" href="#contact" data-plan="Complet">Choisir Complet</a></article>
+    <article class="plan"><h3>Entretien</h3><p class="desc">Votre site toujours à jour, sans vous en occuper.</p>
+      <p class="amount"><s class="was" data-ma-was="300 dh" hidden></s><span data-eu="29 €" data-ma="200 dh">29 €</span> <small>par mois</small></p>
+      <ul><li>Hébergement et sauvegardes</li><li>Petites modifications chaque mois</li><li>Mise à jour des horaires et des prix</li><li>Sans engagement</li></ul>
+      <a class="btn btn-line" href="#contact" data-plan="Entretien">Ajouter l’entretien</a></article>
+  </div>
+  <p class="pnote">Le site vous appartient : à la fin, vous recevez tous les accès, même si vous arrêtez l’entretien.</p>
+</div></section>
+
+<section class="block" id="methode" style="padding-top:0"><div class="wrap">
+  <div class="head"><p class="eyebrow">Méthode</p><h2>De la première question à la mise en ligne</h2></div>
+  <div class="steps">
+    <div class="step"><span class="day">Jour 1</span><h3>Échange de 15 minutes</h3><p>Par WhatsApp, téléphone ou e-mail : votre activité, vos clients, ce qui vous distingue.</p></div>
+    <div class="step"><span class="day">Jour 2</span><h3>Maquette gratuite</h3><p>Vous recevez le lien de la maquette de votre site. Vous ne payez que si elle vous plaît.</p></div>
+    <div class="step"><span class="day">Jours 3 à 6</span><h3>Construction</h3><p>Vos textes, vos photos, vos services. Deux allers-retours de corrections inclus.</p></div>
+    <div class="step"><span class="day">Jour 7</span><h3>Mise en ligne</h3><p>Votre site est en ligne à votre adresse, et vous recevez tous les accès.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="questions" style="padding-top:0"><div class="wrap">
+  <div class="head"><p class="eyebrow">Questions fréquentes</p><h2>Avant de vous lancer</h2></div>
+  <div class="faqs">
+    <details open><summary>Où êtes-vous basés ?</summary><p>À Casablanca, au Maroc.</p></details>
+    <details><summary>Dois-je payer avant de voir quelque chose ?</summary><p>Non. La maquette est gratuite. Vous ne payez la première moitié que si vous décidez de continuer.</p></details>
+    <details><summary>Faut-il fournir mes propres photos ?</summary><p>C’est vivement recommandé : rien ne rassure plus un client que de voir votre vrai commerce, votre équipe et votre travail. Envoyez-nous simplement les photos prises avec votre téléphone, nous les sélectionnons et les retouchons. À défaut, nous utilisons des photos libres de droits en attendant les vôtres. Pour les textes, nous les rédigeons avec vous à partir d’un court échange.</p></details>
+    <details><summary>Que se passe-t-il si j’arrête l’entretien ?</summary><p>Le site vous appartient. Vous recevez les fichiers et les accès, et vous pouvez le confier à qui vous voulez.</p></details>
+    <details><summary>Vous occupez-vous de ma fiche Google ?</summary><p>Oui. Nous créons ou optimisons votre fiche Google (Google Maps) : catégorie, horaires, photos, description, lien vers votre site et bouton d’appel. Une fiche complète et bien tenue aide vos clients à vous trouver et à vous contacter.</p></details>
+    <details><summary>Comment se fait le paiement ?</summary><p>Par virement, avec une facture pour chaque paiement : 50 % à la validation de la maquette, 50 % à la mise en ligne.</p></details>
+  </div>
+</div></section>
+
+<section class="block contact" id="contact"><div class="wrap"><div class="grid">
+  <div>
+    <p class="eyebrow" style="background:color-mix(in srgb, var(--on-forest) 16%, transparent); color:var(--on-forest)">Maquette gratuite</p>
+    <h2 style="margin-top:16px">Recevez la maquette de votre site sous 48 heures</h2>
+    <p class="sub">Décrivez votre activité en quelques lignes. Votre message est préparé automatiquement : envoyez-le par WhatsApp ou par e-mail.</p>
+    <div class="ways">
+      <div class="way"><span>E-mail</span><code id="mail">contact@vitrineatlas.com</code><span class="todo" id="mail-todo">à confirmer</span></div>
+      <div class="way" id="wa-way"><span>WhatsApp</span><code id="wa-num">+212 6 00 00 00 00</code><span class="todo" id="wa-todo">à remplacer</span></div>
+      <div class="way"><span>Réseaux</span><a class="sl" href="https://www.facebook.com/profile.php?id=61595675529684" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a><a class="sl" href="https://www.instagram.com/vitrineatlas/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@vitrineatlas</a></div>
+    </div>
+  </div>
+  <form id="brief" novalidate>
+    <div class="two">
+      <div class="field"><label for="b-nom">Votre nom</label><input id="b-nom" autocomplete="name" placeholder="Claire Martin"></div>
+      <div class="field"><label for="b-act">Activité et ville</label><input id="b-act" placeholder="Plombier à Lyon 7e"></div>
+    </div>
+    <div class="field"><label for="b-off">Formule qui vous intéresse</label>
+      <select id="b-off"><option>Je ne sais pas encore</option><option>Essentiel</option><option selected>Complet</option><option>Entretien</option></select></div>
+    <div class="field"><label for="b-msg">Ce qui vous distingue (facultatif)</label><textarea id="b-msg" placeholder="Intervention en urgence 7j/7, 15 ans d’expérience, devis gratuit…"></textarea></div>
+    <div class="out" aria-live="polite"><b class="note">Votre message</b><pre id="out-t"></pre>
+      <div class="acts"><a class="btn btn-forest btn-sm" id="send-wa" href="#" target="_blank" rel="noopener">Envoyer par WhatsApp</a><button type="button" class="btn btn-line btn-sm" id="copy-msg"><svg><use href="#i-copy"/></svg>Copier le message</button></div>
+      <p class="note" id="copied" aria-live="polite"></p>
+    </div>
+  </form>
+</div></div></section>
+
+<footer><div class="wrap"><a class="logo" href="#haut" style="font-size:18px"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a><span class="soc"><a href="https://www.facebook.com/profile.php?id=61595675529684" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Facebook"><svg><use href="#i-fb"/></svg></a><a href="https://www.instagram.com/vitrineatlas/" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Instagram"><svg><use href="#i-ig"/></svg></a></span><span>© <span id="yr">2026</span> Vitrine Atlas · Tous droits réservés · Casablanca, Maroc</span></div></footer>
+<script>try{document.getElementById("yr").textContent=new Date().getFullYear()}catch(e){}</script>
+
+<script>
+(function(){
+  /* Coordonnées de l’agence : remplacer ici quand elles sont prêtes */
+  var CONTACT={ email:"contact@vitrineatlas.com", emailReady:true, whatsapp:"212663892173", whatsappLabel:"+212 6 63 89 21 73" };
+
+  var mailTodo=document.getElementById('mail-todo'), waWay=document.getElementById('wa-way'), waTodo=document.getElementById('wa-todo'), sendWa=document.getElementById('send-wa');
+  document.getElementById('mail').textContent=CONTACT.email;
+  if(CONTACT.emailReady) mailTodo.hidden=true;
+  if(CONTACT.whatsapp){ document.getElementById('wa-num').textContent=CONTACT.whatsappLabel||('+'+CONTACT.whatsapp); waTodo.hidden=true; } else { sendWa.hidden=true; }
+
+  /* tarifs Europe / Maroc */
+  var eu=document.getElementById('r-eu'), ma=document.getElementById('r-ma');
+  function region(r){
+    eu.setAttribute('aria-pressed', r==='eu'); ma.setAttribute('aria-pressed', r==='ma');
+    document.querySelectorAll('[data-eu]').forEach(function(s){ s.textContent=s.getAttribute('data-'+r); });
+    document.querySelectorAll('[data-ma-was]').forEach(function(w){ w.textContent=w.getAttribute('data-ma-was'); w.hidden = r!=='ma'; });
+    document.getElementById('launch').hidden = r!=='ma';
+    try{ localStorage.setItem('region', r); }catch(e){}
+  }
+  eu.addEventListener('click', function(){ region('eu'); }); ma.addEventListener('click', function(){ region('ma'); });
+  var auto='eu'; try{ var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''; if(tz==='Africa/Casablanca'||tz==='Africa/El_Aaiun') auto='ma'; }catch(e){}
+  var saved=auto; try{ saved=localStorage.getItem('region')||auto; }catch(e){} region(saved==='ma'?'ma':'eu');
+
+  /* message de demande */
+  var off=document.getElementById('b-off'), out=document.getElementById('out-t');
+  function v(id){ return (document.getElementById(id).value||'').trim(); }
+  function build(){
+    var msg='Bonjour Vitrine Atlas,\n\nJe m’appelle '+(v('b-nom')||'[votre nom]')+', '+(v('b-act')||'[activité et ville]')+'.\n'+
+      'Formule qui m’intéresse : '+off.value+'.\n'+(v('b-msg')?('Ce qui me distingue : '+v('b-msg')+'\n'):'')+
+      '\nPouvez-vous me préparer une maquette gratuite ?\nMerci.';
+    out.textContent=msg;
+    if(CONTACT.whatsapp) sendWa.href='https://wa.me/'+CONTACT.whatsapp+'?text='+encodeURIComponent(msg);
+  }
+  ['b-nom','b-act','b-msg'].forEach(function(id){ document.getElementById(id).addEventListener('input', build); });
+  off.addEventListener('change', build);
+  document.getElementById('brief').addEventListener('submit', function(e){ e.preventDefault(); });
+  document.querySelectorAll('[data-plan]').forEach(function(a){ a.addEventListener('click', function(){ off.value=a.getAttribute('data-plan'); build(); }); });
+  build();
+
+  var info=document.getElementById('copied');
+  document.getElementById('copy-msg').addEventListener('click', function(){
+    function selectIt(){ var r=document.createRange(); r.selectNodeContents(out); var s=getSelection(); s.removeAllRanges(); s.addRange(r); info.textContent='Message sélectionné : copiez-le puis collez-le dans votre e-mail.'; }
+    try{ navigator.clipboard.writeText(out.textContent).then(function(){ info.textContent='Message copié. Collez-le dans un e-mail à '+CONTACT.email+'.'; }, selectIt); }catch(err){ selectIt(); }
+  });
+})();
+</script>
+</body>
+</html>
