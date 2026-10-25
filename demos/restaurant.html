@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dar Zitoun · Cuisine marocaine, Casablanca (démo)</title>
+<meta name="description" content="Dar Zitoun, restaurant de cuisine marocaine à Casablanca : tajines, couscous du vendredi, pâtisseries et thé à la menthe. Réservation en ligne et commande à emporter. Site de démonstration Vitrine Atlas.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitrine Atlas">
+<meta property="og:title" content="Dar Zitoun · Cuisine marocaine, Casablanca (démo)">
+<meta property="og:description" content="Exemple de site réalisé par Vitrine Atlas pour un restaurant. Ouvrez-le sur votre téléphone : tout fonctionne.">
+<meta property="og:url" content="https://vitrineatlas.com/demos/restaurant.html">
+<meta property="og:image" content="https://vitrineatlas.com/share/restaurant.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#17110D">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="kit.css">
+<style>
+:root{--bg:#17110D;--bg2:#211813;--bg3:#2C211A;--cream:#F3E7D3;--muted:#B9A68C;--saffron:#E2A13B;--paprika:#C9502F;--olive:#8E9A55;--line:rgba(243,231,211,.13);
+  --nav-bg:#211813;--nav-ink:#F3E7D3;--nav-line:rgba(243,231,211,.13);--focus:#E2A13B;--max:1240px;--d:"Fraunces",Georgia,serif;--b:"Work Sans",system-ui,sans-serif}
+body{background:var(--bg);color:var(--cream);font:400 17px/1.65 var(--b)}
+h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(40px,5.6vw,70px)}
+h1 em,h2 em{font-style:italic;color:var(--saffron)}
+.eye{font:600 12.5px var(--b);letter-spacing:.24em;text-transform:uppercase;color:var(--saffron)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:99px;font:600 15.5px var(--b);text-decoration:none;border:0;white-space:nowrap;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn-saf{background:var(--saffron);color:#1A120C}.btn-saf:hover{background:#F0B456}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--cream);color:var(--cream);background:transparent}
+.btn-line:hover{background:rgba(243,231,211,.08)}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s}
+header.scrolled{background:rgba(23,17,13,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;gap:24px;min-height:80px;position:relative}
+.logo{margin-right:auto;text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo svg{width:34px;height:34px;color:var(--olive)}
+.logo b{font:600 25px var(--d);letter-spacing:-.02em}
+.navlinks{display:flex;gap:30px}
+.navlinks a{text-decoration:none;font-weight:500;font-size:15px;opacity:.82}
+.navlinks a:hover{opacity:1;color:var(--saffron)}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--bg) 2%,rgba(23,17,13,.55) 38%,rgba(23,17,13,.15) 70%,rgba(23,17,13,.5)),linear-gradient(90deg,rgba(23,17,13,.72),rgba(23,17,13,.1) 70%)}
+@media (max-width:700px){.hero::after{background:linear-gradient(0deg,var(--bg) 4%,rgba(23,17,13,.7) 45%,rgba(23,17,13,.55))}}
+.hero .wrap{padding-top:140px;padding-bottom:60px}
+.hero h1{font-size:clamp(50px,7.6vw,108px);max-width:14ch}
+.hero p.lead{font-size:19px;max-width:44ch;margin-top:20px;color:#E8D9C1}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.chipsrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chipsrow span{background:rgba(23,17,13,.6);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:14px;font-weight:500;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#999;margin-right:8px;vertical-align:middle}
+.live.is-open::before{background:#5BC07A;box-shadow:0 0 0 4px rgba(91,192,122,.2)}
+.live.is-closed::before{background:var(--paprika)}
+
+section.pad{padding:100px 0}
+.sig{display:grid;gap:20px;grid-template-columns:1fr;margin-top:46px}
+@media (min-width:860px){.sig{grid-template-columns:repeat(3,1fr)}}
+.dish{background:var(--bg2);border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.dish figure{aspect-ratio:4/3;overflow:hidden}
+.dish img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.dish:hover img{transform:scale(1.06)}
+.dish .tx{padding:22px 24px 26px;display:grid;gap:8px}
+.dish h3{font-size:28px}
+.dish p{color:var(--muted);font-size:15.5px}
+.dish .pr{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-weight:600;color:var(--saffron)}
+.dish .pr span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);font-weight:600}
+.head{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;align-items:end}
+.head p{color:var(--muted);max-width:42ch}
+
+.carte{background:var(--bg2)}
+.carte .grid{display:grid;gap:40px}
+.carte .grid>*,.resa>*{min-width:0}
+@media (min-width:980px){.carte .grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.carte figure{border-radius:28px;overflow:hidden;position:sticky;top:100px;aspect-ratio:4/5}
+.carte figure img{width:100%;height:100%;object-fit:cover}
+@media (max-width:979px){.carte figure{position:relative;top:0;aspect-ratio:16/10}}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin:26px 0 10px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{border:0;background:transparent;color:var(--muted);font:500 16px var(--b);padding:14px 16px;border-bottom:2px solid transparent;white-space:nowrap;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--cream);border-color:var(--saffron)}
+.items li{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.items b{font:400 23px/1.2 var(--d)}
+.items b small{font:600 11px var(--b);letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin-left:8px;vertical-align:middle}
+.items span{font-weight:600;color:var(--saffron);white-space:nowrap}
+.items p{grid-column:1/-1;color:var(--muted);font-size:15px}
+[role="tabpanel"][hidden]{display:none}
+
+.amb{display:grid;gap:14px;grid-template-columns:1fr;margin-top:46px}
+@media (min-width:860px){.amb{grid-template-columns:1fr 1.25fr 1fr}}
+.amb figure{border-radius:26px;overflow:hidden;min-height:300px;position:relative}
+.amb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.amb .q{background:var(--paprika);border-radius:26px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:300px}
+.amb .q p{font:400 italic 30px/1.2 var(--d)}
+.amb .q small{font-size:14px;opacity:.85}
+
+.resa{display:grid;gap:36px}
+@media (min-width:980px){.resa{grid-template-columns:1fr 1fr;align-items:center}}
+form.box{background:var(--bg2);border:1px solid var(--line);border-radius:30px;padding:clamp(20px,4vw,34px);display:grid;gap:16px}
+.f{display:grid;gap:7px}
+.f label{font-weight:500;font-size:14px;color:var(--muted)}
+.f input,.f select{width:100%;border:1px solid var(--line);background:var(--bg3);color:var(--cream);border-radius:14px;padding:14px 15px;font:500 16px var(--b);color-scheme:dark}
+.f input:focus,.f select:focus{outline:none;border-color:var(--saffron)}
+.two{display:grid;gap:14px}@media (min-width:520px){.two{grid-template-columns:1fr 1fr}}
+.stepper{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);background:var(--bg3);border-radius:14px;padding:6px}
+.stepper button{width:44px;height:44px;border-radius:10px;border:0;background:var(--bg2);color:var(--cream);font-size:22px;line-height:1}
+.stepper output{font:600 17px var(--b)}
+.order{background:var(--olive);color:#17110D;border-radius:30px;padding:clamp(24px,4vw,40px);display:grid;gap:14px}
+.order h3{font-size:36px}
+.order p{opacity:.85}
+.infos{display:grid;gap:30px;grid-template-columns:1fr}
+@media (min-width:860px){.infos{grid-template-columns:1fr 1fr 1.3fr}}
+.infos h3{font-size:28px;margin-bottom:12px}
+.infos p{color:var(--muted)}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.hours td:last-child{text-align:right;color:var(--cream);font-weight:500}
+.hours tr.today td{color:var(--saffron)}
+.map{border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:var(--bg2)}
+.map iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.6)}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-top:30px;padding-bottom:20px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="olive" viewBox="0 0 34 34"><g fill="currentColor"><ellipse cx="11" cy="20" rx="6" ry="8.5" transform="rotate(-25 11 20)"/><ellipse cx="23" cy="15" rx="5" ry="7.5" transform="rotate(30 23 15)" opacity=".75"/><path d="M17 2c-1 6 0 10 3 13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></g></symbol>
+</svg>
+
+<header data-header><div class="wrap">
+  <a class="logo" href="#top"><svg><use href="#olive"/></svg><b>Dar Zitoun</b></a>
+  <nav class="navlinks" id="nav" aria-label="Menu principal"><a href="#signatures">Nos plats</a><a href="#carte">La carte</a><a href="#ambiance">Ambiance</a><a href="#reserver">Réserver</a><a href="#infos">Infos</a></nav>
+  <a class="btn btn-saf hide-m" href="#reserver" style="min-height:46px">Réserver une table</a>
+  <button class="burger" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu"><i></i></button>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <img src="img/restaurant-hero.webp" alt="Couscous aux sept légumes servi devant un mur en plâtre sculpté" fetchpriority="high" style="object-position:60% 50%">
+  <div class="wrap">
+    <p class="eye rv">Cuisine marocaine · Casablanca</p>
+    <h1 class="rv d1" style="margin-top:16px">La cuisine de nos mères, <em>servie avec le sourire.</em></h1>
+    <p class="lead rv d2">Tajines mijotés quatre heures, couscous roulé à la main chaque vendredi et pâtisseries maison. Comme à la maison, mais sans la vaisselle.</p>
+    <div class="cta rv d3"><a class="btn btn-saf" href="#reserver">Réserver une table</a><a class="btn btn-line" href="#carte">Voir la carte</a></div>
+    <div class="chipsrow rv d3"><span class="live" data-hours='{"0":["12:00","23:00"],"1":["12:00","15:00","19:00","23:00"],"2":["12:00","15:00","19:00","23:00"],"3":["12:00","15:00","19:00","23:00"],"4":["12:00","15:00","19:00","23:00"],"5":["12:00","15:00","19:00","23:30"],"6":["12:00","23:30"]}'>Horaires</span><span>Terrasse</span><span>À emporter</span></div>
+  </div>
+</section>
+
+<section class="pad" id="signatures"><div class="wrap">
+  <div class="head rv"><div><p class="eye">Nos signatures</p><h2 style="margin-top:14px">Ce qu’on vient <em>manger ici</em></h2></div><p>Des recettes de famille, des produits du marché du matin, et la patience de laisser mijoter.</p></div>
+  <div class="sig">
+    <article class="dish rv"><figure><img src="img/restaurant-tajine.webp" alt="Tajine de poulet aux citrons confits et olives" loading="lazy"></figure><div class="tx"><h3>Tajine poulet, citron confit</h3><p>Poulet fermier, olives violettes, citrons confits maison et coriandre fraîche.</p><div class="pr"><span>Le plus commandé</span>95 dh</div></div></article>
+    <article class="dish rv d1"><figure><img src="img/restaurant-couscous-sq.webp" alt="Couscous aux sept légumes et tfaya" loading="lazy"></figure><div class="tx"><h3>Couscous tfaya</h3><p>Semoule roulée à la main, sept légumes, oignons caramélisés aux raisins et amandes.</p><div class="pr"><span>Le vendredi</span>110 dh</div></div></article>
+    <article class="dish rv d2"><figure><img src="img/restaurant-tajine-viande.webp" alt="Tajine de viande aux légumes" loading="lazy"></figure><div class="tx"><h3>Tajine d’agneau aux légumes</h3><p>Épaule d’agneau fondante, tomates rôties, pommes de terre et ras el-hanout.</p><div class="pr"><span>Fait maison</span>120 dh</div></div></article>
+  </div>
+</div></section>
+
+<section class="pad carte" id="carte"><div class="wrap grid">
+  <figure class="rv"><img src="img/restaurant-chakchouka.webp" alt="Chakchouka dans une poêle en cuivre" loading="lazy"></figure>
+  <div class="rv d1" data-tabs>
+    <p class="eye">La carte</p>
+    <h2 style="margin-top:14px">Choisir, <em>c’est difficile</em></h2>
+    <div class="tabs" role="tablist" aria-label="Rubriques de la carte">
+      <button role="tab" id="c1" aria-controls="k1" aria-selected="true">Entrées</button>
+      <button role="tab" id="c2" aria-controls="k2" aria-selected="false" tabindex="-1">Tajines</button>
+      <button role="tab" id="c3" aria-controls="k3" aria-selected="false" tabindex="-1">Couscous</button>
+      <button role="tab" id="c4" aria-controls="k4" aria-selected="false" tabindex="-1">Douceurs</button>
+      <button role="tab" id="c5" aria-controls="k5" aria-selected="false" tabindex="-1">Boissons</button>
+    </div>
+    <ul class="items" role="tabpanel" id="k1" aria-labelledby="c1">
+      <li><b>Harira</b><span>35 dh</span><p>Soupe de tomates, lentilles et pois chiches, dattes et chebakia.</p></li>
+      <li><b>Salades marocaines <small>à partager</small></b><span>70 dh</span><p>Zaalouk, taktouka, carottes au cumin, betteraves à la fleur d’oranger.</p></li>
+      <li><b>Briouates</b><span>55 dh</span><p>Feuilletés croustillants à la viande hachée ou au fromage et herbes.</p></li>
+      <li><b>Chakchouka</b><span>50 dh</span><p>Tomates, poivrons, œufs mollets, cuite et servie dans sa poêle.</p></li>
+    </ul>
+    <ul class="items" role="tabpanel" id="k2" aria-labelledby="c2" hidden>
+      <li><b>Poulet, citron confit &amp; olives <small>signature</small></b><span>95 dh</span><p>Le classique de Fès, préparé comme chez nos grands-mères.</p></li>
+      <li><b>Agneau aux pruneaux &amp; amandes</b><span>130 dh</span><p>Sucré-salé, cannelle, sésame grillé.</p></li>
+      <li><b>Kefta aux œufs</b><span>85 dh</span><p>Boulettes de bœuf épicées, sauce tomate, œufs.</p></li>
+      <li><b>Poisson à la chermoula</b><span>120 dh</span><p>Selon la pêche du jour, poivrons et pommes de terre.</p></li>
+    </ul>
+    <ul class="items" role="tabpanel" id="k3" aria-labelledby="c3" hidden>
+      <li><b>Couscous sept légumes</b><span>90 dh</span><p>Végétarien, bouillon parfumé, pois chiches.</p></li>
+      <li><b>Couscous tfaya <small>vendredi</small></b><span>110 dh</span><p>Agneau ou poulet, oignons caramélisés, raisins et amandes.</p></li>
+      <li><b>Seffa medfouna</b><span>120 dh</span><p>Vermicelles sucrés, cannelle et poulet caché à l’intérieur.</p></li>
+    </ul>
+    <ul class="items" role="tabpanel" id="k4" aria-labelledby="c4" hidden>
+      <li><b>Pastilla au lait</b><span>45 dh</span><p>Feuilles croustillantes, crème à la fleur d’oranger, amandes.</p></li>
+      <li><b>Assiette de cornes de gazelle</b><span>40 dh</span><p>Pâtisseries maison, servies avec un thé.</p></li>
+      <li><b>Salade d’oranges à la cannelle</b><span>30 dh</span><p>Fraîche et légère.</p></li>
+    </ul>
+    <ul class="items" role="tabpanel" id="k5" aria-labelledby="c5" hidden>
+      <li><b>Thé à la menthe</b><span>20 dh / 45 dh</span><p>Le verre, ou la théière pour deux à quatre personnes.</p></li>
+      <li><b>Jus frais pressés</b><span>30 dh</span><p>Orange, ananas, avocat-amande selon la saison.</p></li>
+      <li><b>Café nous-nous</b><span>18 dh</span><p>Moitié café, moitié lait, comme à Casa.</p></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="pad" id="ambiance"><div class="wrap">
+  <div class="head rv"><div><p class="eye">L’ambiance</p><h2 style="margin-top:14px">Une salle chaleureuse, <em>une terrasse au calme</em></h2></div></div>
+  <div class="amb">
+    <figure class="rv"><img src="img/restaurant-salle.webp" alt="Salle du restaurant avec fresque et banquette" loading="lazy"></figure>
+    <figure class="rv d1"><img src="img/restaurant-terrasse.webp" alt="Terrasse vitrée avec plantes et tables en bois" loading="lazy"></figure>
+    <div class="q rv d2"><p>« Le vendredi, il faut réserver : le couscous part avant 14h. »</p><small>Notre conseil, pas une publicité.</small></div>
+  </div>
+</div></section>
+
+<section class="pad" id="reserver" style="padding-top:0"><div class="wrap resa">
+  <form class="box rv" id="rf" data-own aria-label="Réserver une table">
+    <p class="eye">Réservation</p>
+    <h2 style="font-size:clamp(34px,4vw,48px)">Gardez-nous <em>une table</em></h2>
+    <div class="two">
+      <div class="f"><label for="rd">Date</label><input id="rd" type="date" required></div>
+      <div class="f"><label for="rh">Heure</label><select id="rh"><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>19:30</option><option selected>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option></select></div>
+    </div>
+    <div class="two">
+      <div class="f"><span style="font-weight:500;font-size:14px;color:var(--muted)" id="pl">Personnes</span><div class="stepper" role="group" aria-labelledby="pl"><button type="button" data-s="-1" aria-label="Une personne de moins">−</button><output id="np" aria-live="polite">2</output><button type="button" data-s="1" aria-label="Une personne de plus">+</button></div></div>
+      <div class="f"><label for="rz">Préférence</label><select id="rz"><option>Salle</option><option>Terrasse</option><option>Peu importe</option></select></div>
+    </div>
+    <div class="two">
+      <div class="f"><label for="rn">Nom</label><input id="rn" autocomplete="name" required></div>
+      <div class="f"><label for="rp">Téléphone</label><input id="rp" type="tel" inputmode="tel" autocomplete="tel" required></div>
+    </div>
+    <button class="btn btn-saf" type="submit">Confirmer la réservation</button>
+  </form>
+  <div class="rv d1" style="display:grid;gap:16px">
+    <div class="order"><h3>À emporter</h3><p>Commandez sur WhatsApp avant 11h30, votre tajine est prêt à midi. Livraison possible dans le quartier.</p><a class="btn" style="background:#17110D;color:var(--cream);justify-self:start" href="#" data-demo="Sur votre vrai site, ce bouton ouvre WhatsApp avec la carte et un message prêt à envoyer." data-demo-title="Commande WhatsApp (démo)">Commander sur WhatsApp</a></div>
+    <img src="img/restaurant-the.webp" alt="Théière en argent et verres de thé à la menthe" loading="lazy" style="border-radius:30px;aspect-ratio:16/10;object-fit:cover;width:100%">
+  </div>
+</div></section>
+
+<section class="pad" id="infos" style="padding-top:0"><div class="wrap infos">
+  <div class="rv"><h3>Nous trouver</h3><p>Rue Abou Kacem Echabi, quartier Racine, Casablanca. Voiturier le soir.</p>
+    <a class="btn btn-line" style="margin-top:18px" href="#" data-demo="Sur votre vrai site, ce bouton ouvre l’itinéraire Google Maps ou Waze." data-demo-title="Itinéraire (démo)">Itinéraire</a></div>
+  <div class="rv d1"><h3>Horaires</h3><table class="hours"><tr data-day="1"><td>Lun – Jeu</td><td>12h–15h · 19h–23h</td></tr><tr data-day="5"><td>Vendredi</td><td>12h–15h · 19h–23h30</td></tr><tr data-day="6"><td>Samedi</td><td>12h–23h30</td></tr><tr data-day="0"><td>Dimanche</td><td>12h–23h</td></tr></table></div>
+  <div class="map rv d2"><iframe title="Carte du quartier Racine, Casablanca" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Racine%2C%20Casablanca&amp;z=15&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© <span data-year></span> Dar Zitoun · Casablanca</span><span>Restaurant fictif · projet de démonstration Vitrine Atlas</span></div></footer>
+
+<script src="kit.js" data-sector="Restaurant"></script>
+<script>
+(function(){
+  var np=document.getElementById('np'),n=2;
+  document.querySelectorAll('.stepper button').forEach(function(b){b.addEventListener('click',function(){n=Math.min(20,Math.max(1,n+ +b.getAttribute('data-s')));np.textContent=n;});});
+  var rd=document.getElementById('rd'),t=new Date();t.setDate(t.getDate()+1);rd.value=new Date(t.getTime()-t.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+  document.getElementById('rf').addEventListener('submit',function(e){e.preventDefault();
+    var d=new Date(rd.value).toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+    vaToast('Table pour '+n+', '+d+' à '+document.getElementById('rh').value+' (démo)','Sur votre vrai site, la réservation arrive sur votre WhatsApp et le client reçoit une confirmation.');});
+})();
+</script>
+</body>
+</html>

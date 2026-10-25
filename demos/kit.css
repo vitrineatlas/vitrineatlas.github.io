@@ -1,0 +1,56 @@
+/* Kit commun aux démos Vitrine Atlas : reset, menu mobile, apparition au défilement, bandeau démo, notification */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p,h1,h2,h3,h4,figure,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--focus,#2563EB);outline-offset:3px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:var(--max,1200px);margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+
+/* apparition */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+}
+
+/* menu mobile générique : la page fournit --nav-bg / --nav-ink / --nav-line */
+.burger{display:none;width:46px;height:46px;border:0;background:transparent;place-items:center;border-radius:12px;color:inherit;flex:none}
+.burger i{display:block;width:22px;height:2px;background:currentColor;position:relative;transition:background .2s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:22px;height:2px;background:currentColor;transition:transform .25s,top .25s}
+.burger i::before{top:-7px}.burger i::after{top:7px}
+.burger[aria-expanded="true"] i{background:transparent}
+.burger[aria-expanded="true"] i::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] i::after{top:0;transform:rotate(-45deg)}
+@media (max-width:959px){
+  .burger{display:grid}
+  .navlinks{display:none!important}
+  .navlinks.open{display:flex!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0!important;background:var(--nav-bg,#fff);color:var(--nav-ink,#111);padding:8px 18px 22px;box-shadow:0 24px 40px -24px rgba(0,0,0,.35);border-top:1px solid var(--nav-line,rgba(0,0,0,.08))}
+  .navlinks.open a{padding:15px 2px;font-size:19px;border-bottom:1px solid var(--nav-line,rgba(0,0,0,.08));text-decoration:none;color:inherit;opacity:1}
+  .hide-m{display:none!important}
+}
+
+/* bandeau démo */
+.va-bar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:999;display:flex;align-items:center;gap:10px;background:#0B1222;color:#fff;border-radius:99px;padding:6px 6px 6px 12px;box-shadow:0 18px 40px -14px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:calc(100vw - 20px)}
+.va-bar svg{width:24px;height:24px;flex:none}
+.va-bar .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.va-bar .t b{color:#7DD3FC;font-weight:700}
+.va-bar .s{display:none}
+.va-bar a{background:#2563EB;color:#fff;text-decoration:none;border-radius:99px;padding:10px 15px;font-weight:700;white-space:nowrap}
+.va-bar a:hover{background:#1D4ED8}
+.va-bar button{background:none;border:0;color:#9AA6C2;padding:8px 8px;font-size:18px;line-height:1;border-radius:99px}
+.va-bar.min{padding:6px}
+.va-bar.min .t,.va-bar.min .s,.va-bar.min a{display:none}
+@media (max-width:520px){.va-bar .t{display:none}.va-bar .s{display:inline}}
+.va-space{height:84px}
+
+.va-toast{position:fixed;left:50%;bottom:calc(max(14px,env(safe-area-inset-bottom)) + 66px);transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:1000;width:min(440px,calc(100vw - 28px));background:#fff;color:#0B1222;border-radius:18px;padding:16px 18px 16px 52px;box-shadow:0 24px 60px -18px rgba(0,0,0,.45),0 0 0 1px rgba(11,18,34,.08);font:500 15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:opacity .25s,transform .25s}
+.va-toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.va-toast::before{content:"";position:absolute;left:16px;top:16px;width:24px;height:24px;border-radius:50%;background:#22C55E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.va-toast b{display:block;margin-bottom:3px;font-weight:700}

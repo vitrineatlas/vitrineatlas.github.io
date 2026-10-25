@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centre Médical Al Amal · Casablanca (démo)</title>
+<meta name="description" content="Centre Médical Al Amal à Casablanca : consultations de spécialistes, imagerie médicale, chirurgie ambulatoire et hospitalisation de courte durée. Site de démonstration Vitrine Atlas.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitrine Atlas">
+<meta property="og:title" content="Centre Médical Al Amal · Casablanca (démo)">
+<meta property="og:description" content="Exemple de site réalisé par Vitrine Atlas pour un clinique. Ouvrez-le sur votre téléphone : tout fonctionne.">
+<meta property="og:url" content="https://vitrineatlas.com/demos/clinique.html">
+<meta property="og:image" content="https://vitrineatlas.com/share/clinique.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0E7C7B">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="kit.css">
+<style>
+:root{--bg:#F4F9F9;--white:#FFFFFF;--teal:#0E7C7B;--teal-d:#0A5E5D;--teal-l:#D8EFEE;--navy:#0F2B3D;--muted:#5B6B78;--line:#DCE8EA;--coral:#E8553F;--coral-l:#FDECE9;
+  --nav-bg:#FFFFFF;--nav-ink:#0F2B3D;--nav-line:#DCE8EA;--focus:#0E7C7B;--max:1220px;--f:"Plus Jakarta Sans",system-ui,sans-serif}
+body{background:var(--bg);color:var(--navy);font:500 16.5px/1.6 var(--f)}
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
+h2{font-size:clamp(32px,4.4vw,50px)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--teal);background:var(--teal-l);border-radius:99px;padding:6px 13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 22px;border-radius:14px;font:700 15.5px var(--f);text-decoration:none;border:0;white-space:nowrap;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:19px;height:19px}
+.btn-teal{background:var(--teal);color:#fff}.btn-teal:hover{background:var(--teal-d)}
+.btn-white{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-coral{background:var(--coral);color:#fff}
+
+.topbar{background:var(--navy);color:#CFE0E6;font-size:13.5px}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;padding-top:8px;padding-bottom:8px}
+.topbar b{color:#fff}
+.topbar .urg{display:inline-flex;align-items:center;gap:8px}
+.topbar .urg::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(232,85,63,.25)}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:22px;min-height:72px;position:relative}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
+.logo svg{width:40px;height:40px}
+.logo b{font-size:19px;font-weight:800;letter-spacing:-.02em;display:block;line-height:1.1}
+.logo small{font-size:12px;color:var(--muted);font-weight:600}
+.navlinks{display:flex;gap:26px}
+.navlinks a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
+.navlinks a:hover{color:var(--teal)}
+
+.hero .wrap{display:grid;gap:36px;padding-top:44px;padding-bottom:64px}
+@media (min-width:980px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;padding-top:60px}}
+.hero h1{font-size:clamp(40px,6vw,70px);margin-top:18px}
+.hero h1 span{color:var(--teal)}
+.hero p.lead{font-size:18.5px;color:var(--muted);margin-top:18px;max-width:50ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
+.quick a{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;text-decoration:none;display:grid;gap:8px;font-size:14px;font-weight:700;line-height:1.3;transition:border-color .2s,transform .2s}
+.quick a:hover{border-color:var(--teal);transform:translateY(-2px)}
+.quick svg{width:26px;height:26px;color:var(--teal)}
+.quick a.u svg{color:var(--coral)}
+.hpic{position:relative}
+.hpic .main{border-radius:32px;overflow:hidden;aspect-ratio:4/5;max-height:640px;width:100%}
+.hpic .main img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 24px 50px -24px rgba(15,43,61,.45);display:flex;gap:12px;align-items:center;font-size:14px;line-height:1.3}
+.badge b{display:block;font-size:15px}
+.badge i{width:42px;height:42px;border-radius:12px;background:var(--teal-l);display:grid;place-items:center;flex:none}
+.badge i svg{width:22px;height:22px;color:var(--teal)}
+.badge.b1{left:-14px;bottom:18%}
+.badge.b2{right:-10px;top:10%}
+@media (max-width:600px){.badge.b1{left:8px}.badge.b2{right:8px}}
+
+section.pad{padding:90px 0}
+.shead{display:grid;gap:14px;justify-items:center;text-align:center;max-width:62ch;margin:0 auto 46px}
+.shead p{color:var(--muted);font-size:17.5px}
+
+.spec{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.spec h3{hyphens:auto;overflow-wrap:break-word}
+@media (max-width:420px){.spec article{padding:18px}}
+@media (min-width:900px){.spec{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.spec article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:10px;align-content:start;transition:box-shadow .25s,border-color .25s}
+.spec article:hover{border-color:transparent;box-shadow:0 24px 50px -30px rgba(14,124,123,.5)}
+.spec i{width:48px;height:48px;border-radius:14px;background:var(--teal-l);display:grid;place-items:center}
+.spec i svg{width:26px;height:26px;color:var(--teal)}
+.spec h3{font-size:18px;letter-spacing:-.01em}
+.spec p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+.plat{background:var(--navy);color:#fff;border-radius:36px;margin:0 12px}
+.plat .wrap{padding-top:80px;padding-bottom:80px}
+.plat .shead p{color:#A9BFCB}
+.plat .pill{background:rgba(255,255,255,.1);color:#9EE5E2}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;background:rgba(255,255,255,.06);border-radius:16px;padding:6px;margin:0 auto 30px;width:max-content;max-width:100%}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{border:0;background:transparent;color:#A9BFCB;font:700 15px var(--f);padding:12px 18px;border-radius:12px;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--navy)}
+.panel{display:grid;gap:28px}
+@media (min-width:900px){.panel{grid-template-columns:1.15fr .85fr;align-items:center}}
+.panel[hidden]{display:none}
+.panel .ph{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}
+.panel .ph img{border-radius:22px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.panel .ph img:only-child{grid-column:span 2;aspect-ratio:16/10}
+.panel h3{font-size:30px}
+.panel p{color:#BFD1DA;margin-top:12px}
+.panel ul{margin-top:18px;display:grid;gap:10px}
+.panel li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.panel li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:#2BB3AE url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.2l3 3 6-6' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+
+.docs{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.docs{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.docs{grid-template-columns:repeat(4,1fr)}}
+.doc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:12px}
+.av{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff;background:linear-gradient(135deg,var(--teal),#2BB3AE)}
+.doc h3{font-size:18px}
+.doc .sp{color:var(--teal);font-weight:700;font-size:14.5px}
+.doc .days{font-size:13.5px;color:var(--muted)}
+.doc a{font-weight:700;font-size:14.5px;color:var(--navy);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.doc a:hover{color:var(--teal)}
+
+.path{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:860px){.path{grid-template-columns:repeat(4,1fr)}}
+.path li{background:#fff;border-radius:22px;padding:24px;border:1px solid var(--line);position:relative}
+.path b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-size:15px}
+.path h3{font-size:18px;margin-top:14px}
+.path p{font-size:14.5px;color:var(--muted);margin-top:6px}
+.conv{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.conv span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 18px;font-weight:700;font-size:14.5px}
+
+.rdv{display:grid;gap:30px}
+@media (min-width:980px){.rdv{grid-template-columns:1fr 1fr;align-items:start}}
+form.box{background:#fff;border-radius:28px;padding:clamp(20px,4vw,32px);display:grid;gap:15px;border:1px solid var(--line);box-shadow:0 30px 70px -50px rgba(15,43,61,.5)}
+.f{display:grid;gap:6px}
+.f label{font-weight:700;font-size:14px}
+.f input,.f select,.f textarea{width:100%;border:1.5px solid var(--line);background:var(--bg);border-radius:13px;padding:13px 14px;font-weight:600;font-size:16px}
+.f textarea{min-height:84px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-l)}
+.two{display:grid;gap:15px}@media (min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.consent{font-size:13px;color:var(--muted)}
+.infos{display:grid;gap:14px}
+.ib{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.ib h3{font-size:18px;margin-bottom:10px}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--teal)}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;margin-bottom:8px}
+.live::before{content:"";width:9px;height:9px;border-radius:50%;background:#999}
+.live.is-open::before{background:#1FA463;box-shadow:0 0 0 4px rgba(31,164,99,.2)}
+.live.is-closed::before{background:var(--coral)}
+.urgbox{background:var(--coral-l);border:1px solid #F6C6BD;border-radius:22px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.urgbox b{font-size:18px;display:block}
+.map{border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:var(--teal-l)}
+.map iframe{width:100%;height:100%;border:0}
+footer{background:var(--navy);color:#A9BFCB;font-size:14px;margin-top:40px}
+footer .wrap{padding-top:34px;padding-bottom:20px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#0E7C7B"/><path d="M16 9h8v7h7v8h-7v7h-8v-7H9v-8h7z" fill="#fff"/><circle cx="20" cy="20" r="3" fill="#0E7C7B"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M7.5 15h9"/></g></symbol>
+  <symbol id="i-siren" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 18v-5a6 6 0 0 1 12 0v5M4 18h16v3H4zM12 3v2M4.5 6.5l1.4 1.4M19.5 6.5l-1.4 1.4"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z M7 12h3l1.5-2.5 2 4.5 1.5-2H17"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></g></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M3 21h18"/></g></symbol>
+  <symbol id="i-baby" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="11" r="7"/><path d="M9.5 10h.01M14.5 10h.01M10 14c1.2 1 2.8 1 4 0M12 4c-1 1-1 2 0 3"/></g></symbol>
+  <symbol id="i-bone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M8 5.5a2.5 2.5 0 1 0-3 3l9.5 9.5a2.5 2.5 0 1 0 3 3 2.5 2.5 0 1 0 1.5-4.5L9.5 7A2.5 2.5 0 0 0 8 5.5z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-cut" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5L20 18M8 15.5L20 6"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6zM8.5 12l2.5 2.5 4.5-4.5"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="topbar"><div class="wrap"><span class="urg">Urgences 24 h/24 · <b>05 22 00 00 00</b></span><span class="hide-m">Bd Moulay Youssef, Casablanca · Lun–Sam 8h–20h</span></div></div>
+<header data-header><div class="wrap">
+  <a class="logo" href="#top"><svg><use href="#logo"/></svg><span><b>Al Amal</b><small>Centre médical · Casablanca</small></span></a>
+  <nav class="navlinks" id="nav" aria-label="Menu principal"><a href="#specialites">Spécialités</a><a href="#plateau">Plateau technique</a><a href="#medecins">Médecins</a><a href="#parcours">Votre visite</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-teal hide-m" href="#rdv" style="min-height:46px">Prendre rendez-vous</a>
+  <button class="burger" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu"><i></i></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="rv">
+    <span class="pill">Consultations · Imagerie · Chirurgie ambulatoire</span>
+    <h1>Des soins complets, <span>sous un même toit.</span></h1>
+    <p class="lead">Médecins spécialistes, radiologie, scanner, échographie et bloc opératoire : au Centre Al Amal, votre bilan se fait en une seule visite, et vos résultats vous sont envoyés par message.</p>
+    <div class="cta">
+      <a class="btn btn-teal" href="#rdv"><svg><use href="#i-cal"/></svg>Prendre rendez-vous</a>
+      <a class="btn btn-white" href="#specialites">Nos spécialités</a>
+    </div>
+    <div class="quick">
+      <a href="#rdv"><svg><use href="#i-cal"/></svg>Rendez-vous en ligne</a>
+      <a href="#" data-demo="Sur votre vrai site, vos patients peuvent recevoir leurs comptes rendus par lien sécurisé ou par e-mail." data-demo-title="Résultats (démo)"><svg><use href="#i-flask"/></svg>Mes résultats</a>
+      <a class="u" href="#contact"><svg><use href="#i-siren"/></svg>Urgences 24 h/24</a>
+    </div>
+  </div>
+  <div class="hpic rv d2">
+    <div class="main"><img src="img/clinique-hero.webp" alt="Hall d’accueil lumineux du centre médical" fetchpriority="high"></div>
+    <div class="badge b1"><i><svg><use href="#i-shield"/></svg></i><div><b>Tiers payant</b>CNSS · CNOPS · mutuelles</div></div>
+    <div class="badge b2"><i><svg><use href="#i-scan"/></svg></i><div><b>Scanner &amp; radio</b>sur place</div></div>
+  </div>
+</div></section>
+
+<section class="pad" id="specialites" style="padding-top:40px"><div class="wrap">
+  <div class="shead rv"><span class="pill">Spécialités</span><h2>Les bons spécialistes, au bon moment</h2><p>Une équipe de médecins qui se parlent : votre dossier les suit d’une consultation à l’autre.</p></div>
+  <div class="spec">
+    <article class="rv"><i><svg><use href="#i-steth"/></svg></i><h3>Médecine générale</h3><p>Consultations, bilans de santé, certificats et suivi des maladies chroniques.</p></article>
+    <article class="rv d1"><i><svg><use href="#i-heart"/></svg></i><h3>Cardiologie</h3><p>Électrocardiogramme, échographie cardiaque, test d’effort.</p></article>
+    <article class="rv d2"><i><svg><use href="#i-baby"/></svg></i><h3>Pédiatrie</h3><p>Suivi de croissance, vaccinations, consultations sans longue attente.</p></article>
+    <article class="rv d3"><i><svg><use href="#i-scan"/></svg></i><h3>Imagerie médicale</h3><p>Radiographie, scanner, échographie, comptes rendus sous 24 h.</p></article>
+    <article class="rv"><i><svg><use href="#i-bone"/></svg></i><h3>Traumatologie</h3><p>Entorses, fractures, rééducation en lien avec nos kinésithérapeutes.</p></article>
+    <article class="rv d1"><i><svg><use href="#i-eye"/></svg></i><h3>Ophtalmologie</h3><p>Fond d’œil, suivi du diabète, chirurgie de la cataracte.</p></article>
+    <article class="rv d2"><i><svg><use href="#i-cut"/></svg></i><h3>Chirurgie ambulatoire</h3><p>Entrée le matin, sortie le soir : interventions courantes en toute sécurité.</p></article>
+    <article class="rv d3"><i><svg><use href="#i-flask"/></svg></i><h3>Laboratoire</h3><p>Prises de sang sans rendez-vous de 7h30 à 11h, résultats par message.</p></article>
+  </div>
+</div></section>
+
+<section class="plat" id="plateau"><div class="wrap">
+  <div class="shead rv"><span class="pill">Plateau technique</span><h2>Des équipements récents, entretenus et contrôlés</h2><p>Pas besoin de courir d’un centre à l’autre : tout est réalisé sur place.</p></div>
+  <div data-tabs class="rv">
+    <div class="tabs" role="tablist" aria-label="Plateau technique">
+      <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Imagerie</button>
+      <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Bloc opératoire</button>
+      <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Hospitalisation</button>
+      <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Consultations</button>
+    </div>
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+      <div class="ph"><img src="img/clinique-scanner.webp" alt="Salle de scanner" loading="lazy"><img src="img/clinique-radio.webp" alt="Salle de radiographie" loading="lazy"></div>
+      <div><h3>Radiologie, scanner, échographie</h3><p>Examens sur rendez-vous ou en urgence, interprétés par nos radiologues. Images et compte rendu remis le jour même pour la plupart des examens.</p>
+      <ul><li>Scanner multicoupe basse dose</li><li>Radiographie numérique</li><li>Échographie et Doppler</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div class="ph"><img src="img/clinique-bloc.webp" alt="Bloc opératoire équipé" loading="lazy"></div>
+      <div><h3>Deux salles d’intervention</h3><p>Pour la chirurgie programmée et ambulatoire, avec salle de réveil et surveillance continue.</p>
+      <ul><li>Anesthésiste présent à chaque intervention</li><li>Stérilisation contrôlée</li><li>Sortie le jour même pour les actes courants</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div class="ph"><img src="img/clinique-chambres.webp" alt="Chambres d’hospitalisation" loading="lazy"></div>
+      <div><h3>Hospitalisation de courte durée</h3><p>Chambres individuelles ou doubles, climatisées, avec un accompagnant possible.</p>
+      <ul><li>Infirmières présentes jour et nuit</li><li>Repas adaptés à votre régime</li><li>Visites de 14h à 20h</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="ph"><img src="img/clinique-echo.webp" alt="Salle d’échographie" loading="lazy"><img src="img/clinique-couloir.webp" alt="Couloir des consultations" loading="lazy"></div>
+      <div><h3>12 cabinets de consultation</h3><p>Des créneaux du lundi au samedi, et un rappel de votre rendez-vous par message la veille.</p>
+      <ul><li>Accès pour personnes à mobilité réduite</li><li>Salle d’attente climatisée</li><li>Parking pour les patients</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="pad" id="medecins"><div class="wrap">
+  <div class="shead rv"><span class="pill">Nos médecins</span><h2>Une équipe à votre écoute</h2><p>Choisissez votre médecin et réservez directement son prochain créneau libre.</p></div>
+  <div class="docs">
+    <article class="doc rv"><span class="av">SA</span><div><h3>Dr S. Alaoui</h3><p class="sp">Médecine générale</p></div><p class="days">Lundi au samedi</p><a href="#rdv">Prendre rendez-vous <svg width="16" height="16"><use href="#i-arr"/></svg></a></article>
+    <article class="doc rv d1"><span class="av" style="background:linear-gradient(135deg,#0F2B3D,#2C5A75)">KB</span><div><h3>Dr K. Benjelloun</h3><p class="sp">Cardiologie</p></div><p class="days">Mardi, jeudi, samedi</p><a href="#rdv">Prendre rendez-vous <svg width="16" height="16"><use href="#i-arr"/></svg></a></article>
+    <article class="doc rv d2"><span class="av" style="background:linear-gradient(135deg,#E8553F,#F08A6C)">NT</span><div><h3>Dr N. Tazi</h3><p class="sp">Pédiatrie</p></div><p class="days">Lundi au vendredi</p><a href="#rdv">Prendre rendez-vous <svg width="16" height="16"><use href="#i-arr"/></svg></a></article>
+    <article class="doc rv d3"><span class="av" style="background:linear-gradient(135deg,#5B3FA8,#8A6FD6)">YE</span><div><h3>Dr Y. El Fassi</h3><p class="sp">Radiologie</p></div><p class="days">Tous les jours</p><a href="#rdv">Prendre rendez-vous <svg width="16" height="16"><use href="#i-arr"/></svg></a></article>
+  </div>
+</div></section>
+
+<section class="pad" id="parcours" style="padding-top:0"><div class="wrap">
+  <div class="shead rv"><span class="pill">Votre visite</span><h2>Simple, du rendez-vous aux résultats</h2></div>
+  <ol class="path">
+    <li class="rv"><b>1</b><h3>Réservez</h3><p>En ligne, par téléphone ou sur WhatsApp. Confirmation immédiate.</p></li>
+    <li class="rv d1"><b>2</b><h3>Venez avec vos documents</h3><p>CIN, carte de mutuelle, ordonnance et anciens examens.</p></li>
+    <li class="rv d2"><b>3</b><h3>Consultation &amp; examens</h3><p>Le jour même lorsque c’est possible, sans changer d’adresse.</p></li>
+    <li class="rv d3"><b>4</b><h3>Résultats par message</h3><p>Compte rendu remis en main propre ou envoyé de façon sécurisée.</p></li>
+  </ol>
+  <div class="conv rv"><span>CNSS (AMO)</span><span>CNOPS</span><span>Mutuelles privées</span><span>Assurances internationales</span></div>
+  <p class="rv" style="text-align:center;color:var(--muted);font-size:14px;margin-top:14px">Prise en charge selon votre organisme et votre contrat.</p>
+</div></section>
+
+<section class="pad" id="rdv" style="padding-top:0"><div class="wrap rdv">
+  <div class="rv">
+    <span class="pill">Rendez-vous</span>
+    <h2 style="margin-top:16px">Réservez votre consultation</h2>
+    <p style="color:var(--muted);margin-top:14px;max-width:46ch">Indiquez la spécialité et le jour souhaité : notre secrétariat vous rappelle pour confirmer l’heure.</p>
+    <img src="img/clinique-consult.webp" alt="Médecin prenant des notes pendant une consultation" loading="lazy" style="border-radius:26px;margin-top:26px;aspect-ratio:16/10;object-fit:cover;width:100%">
+  </div>
+  <form class="box rv d1" data-title="Demande de rendez-vous envoyée (démo)" data-msg="Sur votre vrai site, la demande arrive au secrétariat par WhatsApp ou e-mail, et le patient reçoit une confirmation.">
+    <div class="two">
+      <div class="f"><label for="n">Nom et prénom</label><input id="n" autocomplete="name" required></div>
+      <div class="f"><label for="t">Téléphone</label><input id="t" type="tel" autocomplete="tel" inputmode="tel" required placeholder="06 00 00 00 00"></div>
+    </div>
+    <div class="two">
+      <div class="f"><label for="s">Spécialité</label><select id="s"><option>Médecine générale</option><option>Cardiologie</option><option>Pédiatrie</option><option>Imagerie (radio, scanner, écho)</option><option>Traumatologie</option><option>Ophtalmologie</option></select></div>
+      <div class="f"><label for="d">Jour souhaité</label><input id="d" type="date" required></div>
+    </div>
+    <div class="f"><label for="m">Motif (facultatif)</label><textarea id="m" placeholder="Ex. contrôle annuel, douleur au genou…"></textarea></div>
+    <p class="consent">Vos informations servent uniquement à organiser votre rendez-vous.</p>
+    <button class="btn btn-teal" type="submit">Envoyer la demande<svg><use href="#i-arr"/></svg></button>
+  </form>
+</div></section>
+
+<section class="pad" id="contact" style="padding-top:0"><div class="wrap rdv">
+  <div class="infos rv">
+    <div class="urgbox"><div><b>Urgences 24 h/24, 7 j/7</b>Accueil des urgences adultes et enfants</div><a class="btn btn-coral" href="#" data-demo="Sur votre vrai site, ce bouton appelle directement le service des urgences." data-demo-title="Appel (démo)">Appeler</a></div>
+    <div class="ib"><h3>Horaires des consultations</h3>
+      <span class="live" data-hours='{"1":["08:00","20:00"],"2":["08:00","20:00"],"3":["08:00","20:00"],"4":["08:00","20:00"],"5":["08:00","20:00"],"6":["08:00","14:00"]}'>Horaires</span>
+      <table class="hours"><tr data-day="1"><td>Lundi – Vendredi</td><td>8h – 20h</td></tr><tr data-day="6"><td>Samedi</td><td>8h – 14h</td></tr><tr data-day="0"><td>Dimanche</td><td>Urgences uniquement</td></tr></table>
+    </div>
+    <div class="ib"><h3>Adresse</h3><p style="color:var(--muted)">Boulevard Moulay Youssef, quartier Bourgogne, Casablanca. Parking patients au sous-sol.</p></div>
+  </div>
+  <div class="map rv d1"><iframe title="Carte du quartier Bourgogne, Casablanca" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bourgogne%2C%20Casablanca&amp;z=15&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span data-year></span> Centre Médical Al Amal · Casablanca</span><span>Établissement et noms fictifs · projet de démonstration Vitrine Atlas</span></div></footer>
+<script src="kit.js" data-sector="Clinique / centre médical"></script>
+</body>
+</html>

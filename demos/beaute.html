@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Nour · Coiffure &amp; Beauté, Casablanca (démo)</title>
+<meta name="description" content="Maison Nour, salon de coiffure et institut de beauté à Gauthier, Casablanca : coiffure, ongles, soins du visage, épilation et forfaits mariée. Réservation en ligne. Site de démonstration Vitrine Atlas.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitrine Atlas">
+<meta property="og:title" content="Maison Nour · Coiffure &amp; Beauté, Casablanca (démo)">
+<meta property="og:description" content="Exemple de site réalisé par Vitrine Atlas pour un salon de beauté. Ouvrez-le sur votre téléphone : tout fonctionne.">
+<meta property="og:url" content="https://vitrineatlas.com/demos/beaute.html">
+<meta property="og:image" content="https://vitrineatlas.com/share/beaute.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FBF5F2">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="kit.css">
+<style>
+:root{--cream:#FBF5F2;--blush:#F1DCD5;--blush2:#E7C6BC;--rose:#A9475E;--rose-d:#8C3449;--ink:#2B1D1F;--muted:#7A6567;--line:#E9D9D3;--gold:#B08A5E;--white:#FFFFFF;
+  --nav-bg:#FBF5F2;--nav-ink:#2B1D1F;--nav-line:#E9D9D3;--focus:#A9475E;--max:1240px;--d:"Bodoni Moda",Didot,Georgia,serif;--b:"Outfit",system-ui,sans-serif}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.65 var(--b)}
+h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5.4vw,66px)}
+h1 em,h2 em{color:var(--rose)}
+.tiny{font:500 12px var(--b);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:99px;font:500 15.5px var(--b);letter-spacing:.02em;text-decoration:none;border:0;white-space:nowrap;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn-ink{background:var(--ink);color:var(--cream)}.btn-ink:hover{background:#000}
+.btn-rose{background:var(--rose);color:#fff}.btn-rose:hover{background:var(--rose-d)}
+.btn-line{box-shadow:inset 0 0 0 1px var(--ink);background:transparent;color:var(--ink)}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--cream) 90%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+header .wrap{display:flex;align-items:center;gap:24px;min-height:80px;position:relative}
+.logo{margin-right:auto;text-decoration:none;display:grid;line-height:1}
+.logo b{font:400 30px var(--d);letter-spacing:.01em}
+.logo b i{color:var(--rose)}
+.logo small{font:500 10px var(--b);letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-top:5px}
+.navlinks{display:flex;gap:30px}
+.navlinks a{text-decoration:none;font-size:15px;color:var(--muted)}
+.navlinks a:hover{color:var(--rose)}
+
+.hero .wrap{display:grid;gap:30px;padding-top:30px;padding-bottom:80px}
+@media (min-width:980px){.hero .wrap{grid-template-columns:.95fr 1.05fr;align-items:center;gap:50px}}
+.hero h1{font-size:clamp(52px,8.4vw,112px);margin-top:20px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:42ch;margin-top:22px;font-weight:300}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.rating{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
+.rating div{font-size:14px;color:var(--muted)}
+.rating b{display:block;font:400 34px var(--d);color:var(--ink)}
+.collage{position:relative;min-height:540px}
+.collage .main{position:absolute;inset:0 12% 8% 0;border-radius:28px 220px 28px 28px;overflow:hidden}
+.collage .main img,.collage .c1 img,.collage .c2 img{width:100%;height:100%;object-fit:cover}
+.collage .c1{position:absolute;right:0;top:12%;width:34%;aspect-ratio:3/4;border-radius:200px;overflow:hidden;border:8px solid var(--cream)}
+.collage .c2{position:absolute;right:6%;bottom:0;width:30%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--cream)}
+@media (max-width:600px){.collage{min-height:420px}}
+
+.ribbon{background:var(--ink);color:var(--blush)}
+.ribbon .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:center;padding-top:22px;padding-bottom:22px;font:400 italic 22px var(--d)}
+
+section.pad{padding:100px 0}
+.center{text-align:center;display:grid;justify-items:center;gap:16px;max-width:60ch;margin:0 auto 44px}
+.center p{color:var(--muted);font-weight:300;font-size:18px}
+.tabs{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.tabs button{border:1px solid var(--line);background:transparent;border-radius:99px;padding:11px 20px;font:500 15px var(--b);color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.menu{display:grid;gap:30px;align-items:center}
+@media (min-width:900px){.menu{grid-template-columns:.85fr 1.15fr}}
+.menu[hidden]{display:none}
+.menu figure{border-radius:200px 200px 24px 24px;overflow:hidden;aspect-ratio:4/5;max-height:560px}
+.menu figure img{width:100%;height:100%;object-fit:cover}
+.prices li{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.prices li span{font:400 23px/1.2 var(--d)}
+.prices li small{display:block;font:300 14.5px var(--b);color:var(--muted);margin-top:3px}
+.prices li i{flex:1;border-bottom:1px dotted var(--blush2);transform:translateY(-6px);min-width:20px}
+.prices li b{font-weight:500;white-space:nowrap}
+
+.bride{background:var(--blush);border-radius:40px;margin:0 12px;overflow:hidden}
+.bride .wrap{display:grid;gap:30px;padding-top:70px;padding-bottom:70px}
+@media (min-width:900px){.bride .wrap{grid-template-columns:1.1fr .9fr;align-items:center}}
+.bride ul{display:grid;gap:10px;margin-top:22px}
+.bride li{display:flex;gap:10px}
+.bride li::before{content:"✿";color:var(--rose)}
+.bride .price{font:400 46px var(--d);margin-top:20px}
+.bride .price small{font:300 16px var(--b);color:var(--muted)}
+.bride img{border-radius:24px;width:100%;aspect-ratio:4/3;object-fit:cover}
+
+.booking{display:grid;gap:34px}
+@media (min-width:980px){.booking{grid-template-columns:.8fr 1.2fr;align-items:start}}
+form.box{background:var(--white);border-radius:30px;padding:clamp(20px,4vw,34px);display:grid;gap:22px;box-shadow:0 30px 80px -50px rgba(90,40,50,.45)}
+.step{display:grid;gap:10px}
+.step>p{font:500 13px var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.step select,.step input{width:100%;border:1px solid var(--line);background:var(--cream);border-radius:14px;padding:14px 15px;font:500 16px var(--b)}
+.step select:focus,.step input:focus{outline:none;border-color:var(--rose)}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.days button{flex:none;width:66px;border:1px solid var(--line);background:var(--cream);border-radius:16px;padding:10px 0;display:grid;gap:2px;justify-items:center;font:500 12.5px var(--b);color:var(--muted)}
+.days button b{font:400 24px var(--d);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
+.days button[aria-pressed="true"] b{color:#fff}
+.days button:disabled{opacity:.4;cursor:not-allowed}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.times button{border:1px solid var(--line);background:transparent;border-radius:12px;padding:11px 0;font:500 15px var(--b)}
+.times button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.times button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.two{display:grid;gap:12px}@media (min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.recap{background:var(--cream);border-radius:16px;padding:14px 16px;font-size:15px;color:var(--muted)}
+.recap b{color:var(--ink);font-weight:500}
+
+.gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:900px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{border-radius:24px;overflow:hidden;aspect-ratio:3/4}
+.gal figure:nth-child(even){margin-top:40px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.gal figure:hover img{transform:scale(1.06)}
+
+.info{display:grid;gap:30px}
+@media (min-width:900px){.info{grid-template-columns:1fr 1fr 1fr}}
+.info h3{font-size:28px;margin-bottom:12px}
+.info p,.info td{color:var(--muted);font-weight:300}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:500}
+.hours tr.today td{color:var(--rose)}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:14.5px;margin-bottom:8px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:#aaa}
+.live.is-open::before{background:#2EA35F;box-shadow:0 0 0 4px rgba(46,163,95,.18)}
+.live.is-closed::before{background:var(--rose)}
+footer{border-top:1px solid var(--line);margin-top:60px}
+footer .wrap{padding-top:30px;padding-bottom:20px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header data-header><div class="wrap">
+  <a class="logo" href="#top"><b>Maison <i>Nour</i></b><small>Coiffure · Beauté</small></a>
+  <nav class="navlinks" id="nav" aria-label="Menu principal"><a href="#prestations">Prestations</a><a href="#mariee">Mariée</a><a href="#galerie">Galerie</a><a href="#infos">Infos</a></nav>
+  <a class="btn btn-ink hide-m" href="#reserver" style="min-height:46px;padding:0 22px">Réserver</a>
+  <button class="burger" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu"><i></i></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="rv">
+    <p class="tiny">Salon &amp; institut · Gauthier, Casablanca</p>
+    <h1>Prenez le temps <em>d’être belle.</em></h1>
+    <p class="lead">Coiffure, ongles, soins du visage et épilation dans un lieu lumineux et apaisant. Réservez votre créneau en trente secondes, nous nous occupons du reste.</p>
+    <div class="cta"><a class="btn btn-rose" href="#reserver">Réserver un soin</a><a class="btn btn-line" href="#prestations">Voir les tarifs</a></div>
+    <div class="rating"><div><b>9</b>expertes passionnées</div><div><b>7j/7</b>sur rendez-vous</div><div><b>100 %</b>produits professionnels</div></div>
+  </div>
+  <div class="collage rv d2" aria-hidden="true">
+    <div class="main"><img src="img/beaute-hero.webp" alt="" fetchpriority="high" style="object-position:30% 50%"></div>
+    <div class="c1"><img src="img/beaute-nailart.webp" alt="" loading="lazy"></div>
+    <div class="c2"><img src="img/beaute-ongles.webp" alt="" loading="lazy"></div>
+  </div>
+</div></section>
+
+<div class="ribbon"><div class="wrap" aria-hidden="true"><span>Brushing</span><span>·</span><span>Couleur</span><span>·</span><span>Manucure</span><span>·</span><span>Soin visage</span><span>·</span><span>Épilation</span><span>·</span><span>Maquillage</span></div></div>
+
+<section class="pad" id="prestations"><div class="wrap">
+  <div class="center rv"><p class="tiny">Prestations &amp; tarifs</p><h2>Ce que nous faisons <em>le mieux</em></h2><p>Des tarifs clairs, affichés, sans surprise à la caisse.</p></div>
+  <div data-tabs>
+    <div class="tabs rv" role="tablist" aria-label="Catégories de prestations">
+      <button role="tab" id="tb1" aria-controls="pn1" aria-selected="true">Coiffure</button>
+      <button role="tab" id="tb2" aria-controls="pn2" aria-selected="false" tabindex="-1">Ongles</button>
+      <button role="tab" id="tb3" aria-controls="pn3" aria-selected="false" tabindex="-1">Visage</button>
+      <button role="tab" id="tb4" aria-controls="pn4" aria-selected="false" tabindex="-1">Épilation</button>
+    </div>
+    <div class="menu" role="tabpanel" id="pn1" aria-labelledby="tb1">
+      <figure><img src="img/beaute-coiffure.webp" alt="Coiffeuse réalisant un chignon devant de grands miroirs en bois sculpté" loading="lazy" style="object-position:75% 50%"></figure>
+      <ul class="prices">
+        <li><div><span>Brushing</span><small>Shampoing et soin inclus</small></div><i></i><b>120 dh</b></li>
+        <li><div><span>Coupe &amp; brushing</span><small>Conseil personnalisé</small></div><i></i><b>220 dh</b></li>
+        <li><div><span>Couleur</span><small>Racines ou complète</small></div><i></i><b>dès 300 dh</b></li>
+        <li><div><span>Balayage</span><small>Effet soleil, patine incluse</small></div><i></i><b>dès 650 dh</b></li>
+        <li><div><span>Lissage protéiné</span><small>Durée 3 à 4 mois</small></div><i></i><b>dès 1 200 dh</b></li>
+      </ul>
+    </div>
+    <div class="menu" role="tabpanel" id="pn2" aria-labelledby="tb2" hidden>
+      <figure><img src="img/beaute-nailart.webp" alt="Ongles en gel avec motif léopard" loading="lazy"></figure>
+      <ul class="prices">
+        <li><div><span>Manucure classique</span><small>Limage, cuticules, vernis</small></div><i></i><b>100 dh</b></li>
+        <li><div><span>Vernis semi-permanent</span><small>Tient 3 semaines</small></div><i></i><b>180 dh</b></li>
+        <li><div><span>Pose gel</span><small>Avec capsules</small></div><i></i><b>350 dh</b></li>
+        <li><div><span>Nail art</span><small>Par ongle</small></div><i></i><b>dès 20 dh</b></li>
+        <li><div><span>Beauté des pieds</span><small>Bain, gommage, vernis</small></div><i></i><b>200 dh</b></li>
+      </ul>
+    </div>
+    <div class="menu" role="tabpanel" id="pn3" aria-labelledby="tb3" hidden>
+      <figure><img src="img/beaute-visage.webp" alt="Cabine de soin du visage" loading="lazy"></figure>
+      <ul class="prices">
+        <li><div><span>Soin éclat</span><small>Nettoyage, gommage, masque · 45 min</small></div><i></i><b>350 dh</b></li>
+        <li><div><span>Soin hydratant profond</span><small>Peaux sèches · 60 min</small></div><i></i><b>450 dh</b></li>
+        <li><div><span>Soin purifiant</span><small>Peaux mixtes à grasses · 60 min</small></div><i></i><b>450 dh</b></li>
+        <li><div><span>Rehaussement de cils</span><small>Avec teinture</small></div><i></i><b>300 dh</b></li>
+        <li><div><span>Restructuration des sourcils</span><small>Fil ou pince</small></div><i></i><b>60 dh</b></li>
+      </ul>
+    </div>
+    <div class="menu" role="tabpanel" id="pn4" aria-labelledby="tb4" hidden>
+      <figure><img src="img/beaute-epilation.webp" alt="Cabine d’épilation claire avec fauteuil rose" loading="lazy"></figure>
+      <ul class="prices">
+        <li><div><span>Sourcils</span><small>Fil ou cire</small></div><i></i><b>50 dh</b></li>
+        <li><div><span>Visage complet</span><small>Cire tiède</small></div><i></i><b>120 dh</b></li>
+        <li><div><span>Demi-jambes</span><small>Cire orientale ou tiède</small></div><i></i><b>100 dh</b></li>
+        <li><div><span>Jambes complètes</span><small>Cire orientale ou tiède</small></div><i></i><b>180 dh</b></li>
+        <li><div><span>Forfait corps</span><small>Jambes, bras, aisselles</small></div><i></i><b>320 dh</b></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="bride" id="mariee"><div class="wrap">
+  <div class="rv">
+    <p class="tiny">Forfait mariée &amp; événements</p>
+    <h2 style="margin-top:14px">Le grand jour, <em>sans stress</em></h2>
+    <p style="color:var(--muted);margin-top:16px;max-width:46ch;font-weight:300">Un essai, une équipe qui se déplace chez vous le jour J, et des retouches entre chaque tenue.</p>
+    <ul><li>Essai coiffure &amp; maquillage</li><li>Soin visage la semaine précédente</li><li>Manucure et pédicure</li><li>Déplacement à domicile ou en salle</li></ul>
+    <p class="price">dès 3 500 dh <small>· devis sur mesure</small></p>
+    <a class="btn btn-ink" href="#" style="margin-top:18px" data-demo="Sur votre vrai site, ce bouton ouvre WhatsApp avec un message prêt pour demander un devis mariée." data-demo-title="Devis mariée (démo)">Demander un devis</a>
+  </div>
+  <img class="rv d1" src="img/beaute-maquillage.webp" alt="Espace maquillage noir et blanc avec miroirs éclairés" loading="lazy">
+</div></section>
+
+<section class="pad" id="reserver"><div class="wrap booking">
+  <div class="rv">
+    <p class="tiny">Réservation</p>
+    <h2 style="margin-top:14px">Votre créneau <em>en 30 secondes</em></h2>
+    <p style="color:var(--muted);margin-top:16px;font-weight:300;max-width:40ch">Choisissez votre soin, le jour et l’heure. Nous vous confirmons sur WhatsApp et vous envoyons un rappel la veille.</p>
+  </div>
+  <form class="box rv d1" id="bf" data-own aria-label="Réserver un soin">
+    <div class="step"><p>1 · Prestation</p>
+      <select id="svc" aria-label="Prestation"><option>Brushing · 120 dh</option><option>Coupe &amp; brushing · 220 dh</option><option>Couleur · dès 300 dh</option><option>Vernis semi-permanent · 180 dh</option><option>Soin éclat · 350 dh</option><option>Épilation sourcils · 50 dh</option></select>
+    </div>
+    <div class="step"><p>2 · Jour</p><div class="days" id="days" role="group" aria-label="Choisir le jour"></div></div>
+    <div class="step"><p>3 · Heure</p><div class="times" id="times" role="group" aria-label="Choisir l’heure"></div></div>
+    <div class="step"><p>4 · Vos coordonnées</p>
+      <div class="two"><input id="nm" autocomplete="name" placeholder="Prénom et nom" aria-label="Prénom et nom" required><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="Téléphone" aria-label="Téléphone" required></div>
+    </div>
+    <p class="recap" id="recap" aria-live="polite"></p>
+    <button class="btn btn-rose" type="submit">Confirmer ma réservation</button>
+  </form>
+</div></section>
+
+<section class="pad" id="galerie" style="padding-top:0"><div class="wrap">
+  <div class="center rv"><p class="tiny">Le salon</p><h2>Un lieu pensé <em>pour vous</em></h2></div>
+  <div class="gal">
+    <figure class="rv"><img src="img/beaute-hero.webp" alt="Espace coiffure avec bacs à shampoing" loading="lazy"></figure>
+    <figure class="rv d1"><img src="img/beaute-epilation.webp" alt="Cabine d’épilation" loading="lazy"></figure>
+    <figure class="rv d2"><img src="img/beaute-ongles.webp" alt="Manucure en cours" loading="lazy"></figure>
+    <figure class="rv d3"><img src="img/beaute-maquillage.webp" alt="Espace maquillage" loading="lazy"></figure>
+  </div>
+</div></section>
+
+<section class="pad" id="infos" style="padding-top:0"><div class="wrap info">
+  <div class="rv"><h3>Adresse</h3><p>Rue Jean Jaurès, quartier Gauthier, Casablanca.<br>Parking public à proximité.</p>
+    <a class="btn btn-line" href="#" style="margin-top:16px" data-demo="Sur votre vrai site, ce bouton ouvre l’itinéraire Google Maps ou Waze." data-demo-title="Itinéraire (démo)">Itinéraire</a></div>
+  <div class="rv d1"><h3>Horaires</h3>
+    <span class="live" data-hours='{"0":["11:00","18:00"],"1":["10:00","20:00"],"2":["10:00","20:00"],"3":["10:00","20:00"],"4":["10:00","20:00"],"5":["10:00","20:00"],"6":["09:00","21:00"]}'>Horaires</span>
+    <table class="hours"><tr data-day="1"><td>Lundi – Vendredi</td><td>10h – 20h</td></tr><tr data-day="6"><td>Samedi</td><td>9h – 21h</td></tr><tr data-day="0"><td>Dimanche</td><td>11h – 18h</td></tr></table></div>
+  <div class="rv d2"><h3>Contact</h3><p>WhatsApp et téléphone : 06 00 00 00 00<br>Instagram : @maisonnour.casa</p>
+    <a class="btn btn-ink" href="#" style="margin-top:16px" data-demo="Sur votre vrai site, ce bouton ouvre votre WhatsApp." data-demo-title="WhatsApp (démo)">Écrire sur WhatsApp</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© <span data-year></span> Maison Nour · Casablanca</span><span>Salon fictif · projet de démonstration Vitrine Atlas</span></div></footer>
+
+<script src="kit.js" data-sector="Salon de beauté"></script>
+<script>
+(function(){
+  var days=document.getElementById('days'),times=document.getElementById('times'),recap=document.getElementById('recap'),svc=document.getElementById('svc');
+  var J=['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'],M=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  var sel={d:null,t:null}, base=new Date();
+  for(var i=0;i<10;i++){var x=new Date(base);x.setDate(base.getDate()+i);var b=document.createElement('button');b.type='button';
+    b.innerHTML=(i===0?'auj.':J[x.getDay()])+'<b>'+x.getDate()+'</b>'+M[x.getMonth()];b.setAttribute('aria-pressed','false');
+    b.setAttribute('aria-label',x.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}));b._d=x;days.appendChild(b);}
+  function slots(d){var s=['10:00','10:45','11:30','12:15','14:00','14:45','15:30','16:15','17:00','17:45','18:30','19:15'];var seed=d.getDate()*7+d.getMonth();
+    times.innerHTML='';s.forEach(function(h,k){var b=document.createElement('button');b.type='button';b.textContent=h;b.setAttribute('aria-pressed','false');if((seed+k*3)%5===0)b.disabled=true;times.appendChild(b);});}
+  function upd(){recap.innerHTML=sel.d&&sel.t?'<b>'+svc.value.split(' · ')[0]+'</b> · '+sel.d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+' à <b>'+sel.t+'</b>':'Choisissez un jour puis une heure.';}
+  days.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;days.querySelectorAll('button').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});sel.d=b._d;sel.t=null;slots(b._d);upd();});
+  times.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;times.querySelectorAll('button').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false')});sel.t=b.textContent;upd();});
+  svc.addEventListener('change',upd);
+  days.firstChild.click();
+  document.getElementById('bf').addEventListener('submit',function(e){e.preventDefault();
+    if(!sel.t){vaToast('Choisissez une heure','Sélectionnez un créneau disponible avant de confirmer.');return;}
+    vaToast('Réservation demandée (démo)',recap.textContent+'. Sur votre vrai site, la demande arrive sur votre WhatsApp et la cliente reçoit un rappel.');});
+})();
+</script>
+</body>
+</html>
