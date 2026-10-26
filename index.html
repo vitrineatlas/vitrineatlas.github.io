@@ -375,18 +375,18 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
   <div class="head"><p class="eyebrow">Tarifs</p><h2>Des prix clairs, sans surprise</h2><p>Paiement en deux fois : 50 % à la validation de la maquette, 50 % à la mise en ligne.</p>
     <div class="switch" role="group" aria-label="Région des tarifs"><button type="button" id="r-eu" aria-pressed="true">Europe et Canada</button><button type="button" id="r-ma" aria-pressed="false">Maroc</button></div>
   </div>
-  <p class="launch" id="launch" hidden><b>Offre de lancement</b> réservée à nos 5 premiers clients au Maroc. Prix normaux&nbsp;: 3&nbsp;500&nbsp;dh, 6&nbsp;000&nbsp;dh et 300&nbsp;dh par mois.</p>
+  <p class="launch" id="launch"><b>Offre de lancement</b> <span data-eu="réservée à nos 5 premiers clients en Europe et au Canada. Prix normaux : 990 €, 1 490 € et 39 € par mois." data-ma="réservée à nos 5 premiers clients au Maroc. Prix normaux : 3 500 dh, 6 000 dh et 300 dh par mois.">réservée à nos 5 premiers clients en Europe et au Canada. Prix normaux : 990 €, 1 490 € et 39 € par mois.</span></p>
   <div class="prices">
     <article class="plan"><h3>Essentiel</h3><p class="desc">Un site d’une page pour être trouvé et contacté.</p>
-      <p class="amount"><s class="was" data-ma-was="3 500 dh" hidden></s><span data-eu="590 €" data-ma="1 250 dh">590 €</span> <small>une fois</small></p>
+      <p class="amount"><s class="was" data-ma-was="3 500 dh" data-eu-was="990 €">990 €</s><span data-eu="590 €" data-ma="1 250 dh">590 €</span> <small>une fois</small></p>
       <ul><li>Site une page sur mesure</li><li>Services, horaires, carte et contact</li><li>Bouton d’appel et WhatsApp</li><li>Formulaire de contact simple</li><li>En ligne en 7 jours</li></ul>
       <a class="btn btn-line" href="#contact" data-plan="Essentiel">Choisir Essentiel</a></article>
     <article class="plan star"><span class="badge">Le plus choisi</span><h3>Complet</h3><p class="desc">Pour présenter chaque service et recevoir des demandes en ligne.</p>
-      <p class="amount"><s class="was" data-ma-was="6 000 dh" hidden></s><span data-eu="890 €" data-ma="2 450 dh">890 €</span> <small>une fois</small></p>
+      <p class="amount"><s class="was" data-ma-was="6 000 dh" data-eu-was="1 490 €">1 490 €</s><span data-eu="890 €" data-ma="2 450 dh">890 €</span> <small>une fois</small></p>
       <ul><li>Jusqu’à 5 pages ou sections détaillées</li><li>Formulaire avancé : rendez-vous, créneaux ou devis</li><li>Deuxième langue incluse</li><li>Optimisation de votre fiche Google</li><li>Nom de domaine offert la 1re année</li></ul>
       <a class="btn btn-forest" href="#contact" data-plan="Complet">Choisir Complet</a></article>
     <article class="plan"><h3>Entretien</h3><p class="desc">Votre site toujours à jour, sans vous en occuper.</p>
-      <p class="amount"><s class="was" data-ma-was="300 dh" hidden></s><span data-eu="29 €" data-ma="200 dh">29 €</span> <small>par mois</small></p>
+      <p class="amount"><s class="was" data-ma-was="300 dh" data-eu-was="39 €">39 €</s><span data-eu="29 €" data-ma="200 dh">29 €</span> <small>par mois</small></p>
       <ul><li>Hébergement et sauvegardes</li><li>Petites modifications chaque mois</li><li>Mise à jour des horaires et des prix</li><li>Sans engagement</li></ul>
       <a class="btn btn-line" href="#contact" data-plan="Entretien">Ajouter l’entretien</a></article>
   </div>
@@ -459,8 +459,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
   function region(r){
     eu.setAttribute('aria-pressed', r==='eu'); ma.setAttribute('aria-pressed', r==='ma');
     document.querySelectorAll('[data-eu]').forEach(function(s){ s.textContent=s.getAttribute('data-'+r); });
-    document.querySelectorAll('[data-ma-was]').forEach(function(w){ w.textContent=w.getAttribute('data-ma-was'); w.hidden = r!=='ma'; });
-    document.getElementById('launch').hidden = r!=='ma';
+    document.querySelectorAll('.was').forEach(function(w){ var t=w.getAttribute('data-'+r+'-was'); w.textContent=t||''; w.hidden=!t; });
     try{ localStorage.setItem('region', r); }catch(e){}
   }
   eu.addEventListener('click', function(){ region('eu'); }); ma.addEventListener('click', function(){ region('ma'); });
