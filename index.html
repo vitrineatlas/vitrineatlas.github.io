@@ -158,7 +158,12 @@ section.block .wrap{padding-block:84px}
 .demo p{color:var(--forest-muted); font-size:16px}
 .demo ul{margin:2px 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px}
 .demo li{font-size:13.5px; font-weight:700; border:1px solid color-mix(in srgb, var(--on-forest) 22%, transparent); border-radius:99px; padding:4px 11px}
-.demo .btn{align-self:flex-start; margin-top:auto}
+.demo .btn{align-self:flex-start}
+.demo .dbtns{display:flex; flex-wrap:wrap; gap:8px; margin-top:auto}
+.btn-out{background:transparent; color:var(--on-forest); box-shadow:inset 0 0 0 1.5px color-mix(in srgb, var(--on-forest) 45%, transparent)}
+.btn-out:hover{background:color-mix(in srgb, var(--on-forest) 10%, transparent)}
+.demo .dalt{font-size:13.5px; margin-top:-2px}
+.demo.ask .btn{margin-top:auto}
 .demo.ask{border-style:dashed; border-width:1.5px; justify-content:center; padding:26px}
 .demo.ask h3{font-size:30px}
 .demo.ask .btn{white-space:normal; text-align:center; height:auto; padding-block:12px}
@@ -306,49 +311,49 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
 </div></section>
 
 <section class="block dark-band" id="realisations"><div class="wrap">
-  <div class="head"><p class="eyebrow">Exemples par métier</p><h2>Imaginez votre commerce ici</h2><p>Sept sites de démonstration, un par métier, chacun avec son style et ses fonctions. Ouvrez-les sur votre téléphone : tout fonctionne. Les commerces présentés sont fictifs.</p></div>
+  <div class="head"><p class="eyebrow">Exemples par métier</p><h2>Imaginez votre commerce ici</h2><p>Sept métiers, chacun en deux versions : <b>Essentiel</b> (une page) et <b>Complet</b> (5 pages), avec deux styles différents pour vous montrer la variété possible. Ouvrez-les sur votre téléphone : tout fonctionne. Les commerces présentés sont fictifs.</p></div>
   <div class="demos">
     <article class="demo">
       <a class="shot" href="demos/riad.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Riad Dar Yasmine"><img src="demos/img/shot-riad.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Riad Dar Yasmine"></a>
       <div class="tx"><p class="meta"><span class="st">Riad / maison d’hôtes</span><span>Marrakech · terre cuite et zellige</span></p><h3>Riad Dar Yasmine</h3><p>Chambres avec prix, table d’hôtes, expériences et réservation par dates.</p>
       <ul><li>Réservation par dates</li><li>Arabe et français</li><li>Accès dans la médina</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/riad.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/riad.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/riad/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Riad Al Wafa">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Riad Al Wafa, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/restaurant.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Dar Zitoun"><img src="demos/img/shot-restaurant.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Dar Zitoun"></a>
       <div class="tx"><p class="meta"><span class="st">Restaurant / café</span><span>Casablanca · ambiance sombre et safran</span></p><h3>Dar Zitoun</h3><p>Plats signatures, carte en onglets, réservation de table et commande WhatsApp.</p>
       <ul><li>Carte en ligne</li><li>Réservation de table</li><li>Ouvert / fermé en direct</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/restaurant.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/restaurant.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/restaurant/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Bab Jdid">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Bab Jdid, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/hotel.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Hôtel Bahia Palms"><img src="demos/img/shot-hotel.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Hôtel Bahia Palms"></a>
       <div class="tx"><p class="meta"><span class="st">Hôtel</span><span>Agadir · bleu nuit et or</span></p><h3>Hôtel Bahia Palms</h3><p>Grande photo plein écran, moteur de dates, chambres avec tarifs et services.</p>
       <ul><li>Calcul des nuits</li><li>Chambres &amp; tarifs</li><li>Réservation directe</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/hotel.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/hotel.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/hotel/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Hôtel Azur Mogador">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Hôtel Azur Mogador, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/beaute.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Maison Nour"><img src="demos/img/shot-beaute.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Maison Nour"></a>
       <div class="tx"><p class="meta"><span class="st">Salon de beauté</span><span>Casablanca · rose poudré et noir</span></p><h3>Maison Nour</h3><p>Tarifs par catégorie, forfait mariée et réservation avec jours et créneaux.</p>
       <ul><li>Prise de rendez-vous</li><li>Grille de tarifs</li><li>Créneaux disponibles</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/beaute.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/beaute.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/beaute/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Atelier Soraya">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Atelier Soraya, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/immobilier.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Dar Sakan Immobilier"><img src="demos/img/shot-immobilier.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Dar Sakan Immobilier"></a>
       <div class="tx"><p class="meta"><span class="st">Agence immobilière</span><span>Casablanca, Rabat, Marrakech · vert et laiton</span></p><h3>Dar Sakan Immobilier</h3><p>Recherche par ville, type et budget, fiches des biens, estimation gratuite.</p>
       <ul><li>Recherche de biens</li><li>Favoris</li><li>Formulaire d’estimation</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/immobilier.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/immobilier.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/immobilier/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Bayt Immobilier">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Bayt Immobilier, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/clinique.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Centre Médical Al Amal"><img src="demos/img/shot-clinique.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Centre Médical Al Amal"></a>
       <div class="tx"><p class="meta"><span class="st">Clinique / centre médical</span><span>Casablanca · bleu canard rassurant</span></p><h3>Centre Médical Al Amal</h3><p>Spécialités, plateau technique en onglets, médecins et prise de rendez-vous.</p>
       <ul><li>Rendez-vous en ligne</li><li>Urgences en évidence</li><li>Mutuelles acceptées</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/clinique.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/clinique.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/dentaire/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Clinique dentaire Les Orangers">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Clinique dentaire Les Orangers, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/opticien.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Optique Lumière"><img src="demos/img/shot-opticien.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Optique Lumière"></a>
       <div class="tx"><p class="meta"><span class="st">Opticien</span><span>Casablanca · crème et vermillon</span></p><h3>Optique Lumière</h3><p>Montures filtrables, contrôle de la vue, atelier et réservation de créneau.</p>
       <ul><li>Filtres montures</li><li>Créneaux de RDV</li><li>Horaires en direct</li></ul>
-      <a class="btn btn-lime btn-sm" href="demos/opticien.html" target="_blank" rel="noopener">Voir la démo<svg><use href="#i-arrow"/></svg></a></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/opticien.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/opticien/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Optic Nova">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Optic Nova, un autre style.</p></div>
     </article>
     <article class="demo ask">
       <div class="tx"><p class="meta"><span class="st">Votre métier</span></p><h3>Vous ne voyez pas votre activité&nbsp;?</h3><p>Auto-école, garage, avocat, architecte, boutique, salle de sport, traiteur… Envoyez-nous le nom de votre commerce : nous préparons une maquette gratuite à votre image.</p>
@@ -379,7 +384,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
   <div class="prices">
     <article class="plan"><h3>Essentiel</h3><p class="desc">Un site d’une page pour être trouvé et contacté.</p>
       <p class="amount"><s class="was" data-ma-was="3 500 dh" data-eu-was="990 €">990 €</s><span data-eu="590 €" data-ma="1 250 dh">590 €</span> <small>une fois</small></p>
-      <ul><li>Site une page sur mesure</li><li>Services, horaires, carte et contact</li><li>Bouton d’appel et WhatsApp</li><li>Formulaire de contact simple</li><li>En ligne en 7 jours</li></ul>
+      <ul><li>Site une page sur mesure</li><li>Services, horaires, carte et contact</li><li>Bouton d’appel et WhatsApp</li><li>Formulaire de contact simple</li><li><span data-eu="Nom de domaine à votre nom : environ 15 € par an, à votre charge" data-ma="Nom de domaine à votre nom : 150 à 250 dh par an, à votre charge">Nom de domaine à votre nom : environ 15 € par an, à votre charge</span></li><li>En ligne en 7 jours</li></ul>
       <a class="btn btn-line" href="#contact" data-plan="Essentiel">Choisir Essentiel</a></article>
     <article class="plan star"><span class="badge">Le plus choisi</span><h3>Complet</h3><p class="desc">Pour présenter chaque service et recevoir des demandes en ligne.</p>
       <p class="amount"><s class="was" data-ma-was="6 000 dh" data-eu-was="1 490 €">1 490 €</s><span data-eu="890 €" data-ma="2 450 dh">890 €</span> <small>une fois</small></p>

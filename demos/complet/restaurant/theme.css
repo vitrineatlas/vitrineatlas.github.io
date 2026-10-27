@@ -1,0 +1,57 @@
+/* Démo Complet · Bab Jdid : crème, rouge tomate, vert olive, gourmand et chaleureux */
+:root{--bg:#FFF6E9;--bg2:#F7E7CF;--card:#FFFDF8;--ink:#2A1A12;--muted:#6B5446;--line:#EAD7BC;
+--acc:#C0392B;--acc-d:#992A1F;--acc-ink:#fff;--acc-soft:#F8DDD3;--olive:#3F5E2B;--gold:#F2B544;
+--dark:#2A1A12;--on-dark:#FFF6E9;--on-dark-muted:#CDB8A4;--top-bg:rgba(255,246,233,.95);
+--font-h:"Gloock",Georgia,serif;--font-b:"Rubik",system-ui,sans-serif;--h-w:400;--h-track:-.01em;
+--r:22px;--r-s:12px;--btn-r:14px;--shadow:0 22px 44px -28px rgba(42,26,18,.5)}
+.kicker{color:var(--olive)}
+.btn-main{box-shadow:0 5px 0 var(--acc-d)}
+.btn-main:active{transform:translateY(3px);box-shadow:0 2px 0 var(--acc-d)}
+.hero{padding:clamp(34px,5vw,70px) 0 clamp(48px,6vw,84px)}
+.hero-in{display:grid;gap:40px;align-items:center;grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){.hero-in{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}
+.hero h1{font-size:clamp(44px,6.6vw,86px)}
+.hero h1 span{color:var(--acc)}
+.hero .status{margin-top:26px}
+.hero-plate{position:relative;max-width:520px;margin:0 auto}
+.hero-plate img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:12px solid #fff;box-shadow:var(--shadow)}
+.sticker{position:absolute;right:-6px;top:10%;width:130px;height:130px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--font-h);font-size:19px;line-height:1.1;transform:rotate(12deg);box-shadow:0 10px 20px -10px rgba(0,0,0,.4)}
+.band{background:var(--olive);color:#FFF6E9}
+.band .feat p{color:#DCE5D2}
+.band .ico{background:rgba(255,255,255,.14);color:var(--gold)}
+.dish{background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.dish img{width:100%;aspect-ratio:4/3.2;object-fit:cover}
+.dish>div{padding:20px 22px 24px;display:grid;gap:6px}
+.dish h3{font-family:var(--font-h);font-weight:400;font-size:26px}
+.dish p{color:var(--muted)}
+.dish b{color:var(--acc);font-size:19px}
+.center-btn{display:flex;justify-content:center;margin-top:34px}
+.ico{background:var(--acc-soft);color:var(--acc-d)}
+.page-hero{background:var(--bg2);border-bottom:0}
+.menu-wrap{display:grid;gap:28px;grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:960px){.menu-wrap{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
+.menu-card{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:clamp(22px,4vw,40px);box-shadow:8px 8px 0 var(--gold)}
+.tablist [role="tab"][aria-selected="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+.menu{display:grid;gap:4px}
+.menu li{display:grid;grid-template-columns:auto minmax(20px,1fr) auto;align-items:baseline;gap:4px 10px;padding:14px 0}
+.menu .mn{font-family:var(--font-h);font-size:22px}
+.menu .dots{border-bottom:2px dotted var(--line);transform:translateY(-6px)}
+.menu .mp{font-weight:700;color:var(--acc)}
+.menu small{grid-column:1/-1;color:var(--muted);font-size:15px}
+.menu-side{background:var(--olive);color:#FFF6E9;border-radius:var(--r);overflow:hidden}
+.menu-side img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.ms-b{padding:22px 24px 26px;display:grid;gap:10px}
+.ms-b h3{font-family:var(--font-h);font-weight:400;font-size:26px}
+.ms-b p{color:#DCE5D2}
+.ms-b .btn{width:max-content}
+.top-al{align-items:start}
+.side{display:grid;gap:18px}
+.side-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.ev{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:28px;box-shadow:6px 6px 0 var(--acc-soft)}
+.ev .ic{width:34px;height:34px;color:var(--acc);margin-bottom:10px}
+.ev h3{font-family:var(--font-h);font-weight:400;font-size:26px}
+.ev p{color:var(--muted);margin-top:6px}
+.space{margin-top:26px}
+.media img{aspect-ratio:4/3}
+.cta-band{background:var(--acc)}
+.map-art .pinmark{background:var(--acc)}

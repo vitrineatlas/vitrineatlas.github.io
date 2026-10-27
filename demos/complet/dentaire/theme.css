@@ -1,0 +1,52 @@
+/* Démo Complet · Clinique dentaire Les Orangers : menthe, bleu marine, formes douces */
+:root{--bg:#FFFFFF;--bg2:#F1F6FA;--card:#FFFFFF;--ink:#0B2545;--muted:#4A5A70;--line:#DCE5EE;
+--acc:#0B7A5E;--acc-d:#075C47;--acc-ink:#fff;--acc-soft:#DFF4EC;--orange:#F2A33A;
+--dark:#0B2545;--on-dark:#EAF1F8;--on-dark-muted:#A9B9CC;--top-bg:rgba(255,255,255,.94);
+--font-h:"Lexend",system-ui,sans-serif;--font-b:"Source Sans 3",system-ui,sans-serif;--h-w:600;--h-track:-.025em;
+--r:26px;--r-s:16px;--btn-r:999px;--shadow:0 24px 50px -28px rgba(11,37,69,.35)}
+.topbar{background:#E8F3EF;color:var(--acc-d);font-weight:600}
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(48px,7vw,96px);background:radial-gradient(1200px 500px at 85% 10%,#E6F5EF 0,transparent 60%),var(--bg)}
+.hero-in{display:grid;gap:44px;align-items:center;grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){.hero-in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero-points{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-weight:600}
+.hero-points li{display:flex;align-items:center;gap:8px}
+.hero-points .ic{color:var(--acc)}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:4/4.6;object-fit:cover;border-radius:220px 220px 32px 32px;box-shadow:var(--shadow)}
+.hero-card{position:absolute;left:-14px;bottom:28px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);display:grid;gap:2px;font-size:14px;color:var(--muted)}
+@media (max-width:959px){.hero-img img{aspect-ratio:4/3.4;border-radius:32px}.hero-card{left:12px}}
+.strip{border-bottom:1px solid var(--line)}
+.soin-card{text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s}
+.soin-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.soin-card .ico{margin-bottom:8px}
+.steps.v{grid-template-columns:minmax(0,1fr)!important;gap:18px;margin-top:26px}
+.steps.v li{padding:0 0 0 64px;min-height:48px}
+.steps.v li::before{font-size:15px;width:44px;height:44px;border-radius:50%;background:var(--acc-soft);display:grid;place-items:center;color:var(--acc-d)}
+.cta-band{background:linear-gradient(120deg,#0B7A5E,#0B5A73)}
+.page-hero{background:linear-gradient(180deg,#F1F6FA,#fff)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.jump a{text-decoration:none;font-weight:600;font-size:15px;padding:9px 16px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.jump a:hover{border-color:var(--acc);color:var(--acc-d)}
+.soins-list{display:grid;gap:22px}
+.soin{display:grid;gap:22px;grid-template-columns:minmax(0,1fr);background:var(--bg2);border-radius:var(--r);padding:clamp(24px,4vw,44px);scroll-margin-top:110px}
+@media (min-width:760px){.soin{grid-template-columns:auto minmax(0,1fr)}}
+.ico.big{width:72px;height:72px;border-radius:22px;background:#fff}
+.ico.big .ic{width:32px;height:32px}
+.soin h2{font-size:clamp(26px,3vw,34px)}
+.soin .lead{margin-top:10px}
+@media (min-width:760px){.ticks.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dur{display:flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:var(--acc-d)}
+.doc-card{background:var(--bg2);border-radius:var(--r);padding:clamp(26px,4vw,44px);display:grid;gap:18px}
+.doc-card .role{color:var(--acc-d);font-weight:700}
+.avatar.xl{width:96px;height:96px;font-size:32px;background:#fff}
+.top-al{align-items:start}
+.side h2{font-size:28px}
+.box-urg{display:flex;gap:14px;margin-top:26px;padding:20px;border-radius:var(--r-s);background:#FFF4E5;color:#7A4A06}
+.box-urg .ic{color:#B9650A;margin-top:3px}
+.box-urg p{font-size:15px;margin:2px 0 6px}
+.box-urg a{font-weight:700;color:#7A4A06}
+.box-bring{margin-top:16px;padding:20px;border-radius:var(--r-s);border:1px solid var(--line)}
+.box-bring h3{font-size:17px}
+.access{margin-top:34px}
+.contact-side{display:grid;gap:18px}
