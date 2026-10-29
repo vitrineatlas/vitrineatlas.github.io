@@ -262,6 +262,20 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
 .vt-url{font-weight:600;color:var(--ink);white-space:nowrap}
 .vitrino .btn{flex:none}
 @media (max-width:600px){.vitrino{padding:22px 18px}.vitrino .btn{width:100%}}
+.vt-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.vt-main{min-width:0}
+.vt-points{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vt-points li{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:6px}
+.vt-points b{font-family:var(--display);font-size:18px}
+.vt-points span{color:var(--muted);font-size:15.5px}
+.vt-offer{border:2px solid #FFC23D;background:color-mix(in srgb,#FFC23D 14%,var(--bg));border-radius:18px;padding:18px 22px;margin-bottom:24px}
+.vt-offer p{margin:0}
+.vt-offer .vt-kick{color:#B07A00!important;margin-bottom:6px}
+.vt-cta{display:flex;gap:12px;flex-wrap:wrap}
+.vt-phone{display:block;justify-self:center;max-width:300px;width:100%}
+.vt-phone img{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 40px rgba(11,18,34,.22))}
+@media (max-width:860px){.vt-grid{grid-template-columns:1fr}.vt-phone{max-width:240px}}
+@media (max-width:560px){.vt-points{grid-template-columns:1fr}.vt-cta .btn{width:100%}}
 </style>
 <style>html{-webkit-text-size-adjust:100%;text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
 </head>
@@ -285,7 +299,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
 
 <header class="top"><div class="wrap">
   <a class="logo" href="#haut" aria-label="Vitrine Atlas, accueil"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a>
-  <nav class="links" aria-label="Sections"><a href="#realisations">Exemples</a><a href="#inclus">Inclus</a><a href="#tarifs">Tarifs</a><a href="#methode">Méthode</a><a href="#questions">Questions</a><a href="https://vitrino.ma/" target="_blank" rel="noopener">Vitrino</a></nav>
+  <nav class="links" aria-label="Sections"><a href="#realisations">Exemples</a><a href="#inclus">Inclus</a><a href="#tarifs">Tarifs</a><a href="#methode">Méthode</a><a href="#questions">Questions</a><a href="#vitrino">Vitrino</a></nav>
   <a class="btn btn-lime btn-sm" href="#contact">Maquette gratuite</a>
 </div></header>
 
@@ -407,7 +421,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
   <p class="pnote">Le site vous appartient : à la fin, vous recevez tous les accès, même si vous arrêtez l’entretien.</p>
   <aside class="vitrino" aria-label="Vitrino, vitrines gratuites au Maroc">
     <div><p class="vt-kick">Au Maroc · Gratuit</p><h3>Pas encore prêt pour un site sur mesure&nbsp;?</h3>
-      <p>Commencez avec <b>Vitrino</b>, notre service de vitrines en ligne : une page à votre nom (<span class="vt-url">votre-nom.vitrino.ma</span>) avec vos services, vos photos, vos horaires et un bouton WhatsApp. Gratuit, sans contrat et sans carte bancaire.</p></div>
+      <p>Commencez avec <b>Vitrino</b>, notre service de vitrines en ligne : une page à votre nom (<span class="vt-url">votre-nom.vitrino.ma</span>) avec vos services, vos photos, vos horaires et un bouton WhatsApp. Gratuit, sans contrat et sans carte bancaire. Offre de lancement Vitrino : la formule Essentiel offerte à vie aux 50 premiers professionnels de chaque ville.</p></div>
     <a class="btn btn-forest" href="https://vitrino.ma/inscrire/" target="_blank" rel="noopener">Créer ma vitrine gratuite<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </aside>
 </div></section>
@@ -431,6 +445,23 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
     <details><summary>Que se passe-t-il si j’arrête l’entretien ?</summary><p>Le site vous appartient. Vous recevez les fichiers et les accès, et vous pouvez le confier à qui vous voulez.</p></details>
     <details><summary>Vous occupez-vous de ma fiche Google ?</summary><p>Oui. Nous créons ou optimisons votre fiche Google (Google Maps) : catégorie, horaires, photos, description, lien vers votre site et bouton d’appel. Une fiche complète et bien tenue aide vos clients à vous trouver et à vous contacter.</p></details>
     <details><summary>Comment se fait le paiement ?</summary><p>Par virement, avec une facture pour chaque paiement : 50 % à la validation de la maquette, 50 % à la mise en ligne.</p></details>
+  </div>
+</div></section>
+
+<section class="block" id="vitrino" style="padding-top:0"><div class="wrap">
+  <div class="head"><p class="eyebrow">Vitrino · Au Maroc</p><h2>Commencez gratuitement avec Vitrino</h2><p>Vitrino est notre plateforme de vitrines en ligne. Chaque commerce et chaque professionnel y a son propre site, gratuit, à son nom.</p></div>
+  <div class="vt-grid">
+    <div class="vt-main">
+      <ul class="vt-points">
+        <li><b>Une adresse à votre nom</b><span>votre-nom.vitrino.ma, à mettre sur Google Maps, Instagram, Facebook et WhatsApp.</span></li>
+        <li><b>Un design rien qu’à vous</b><span>Deux professionnels du même métier dans la même ville n’ont jamais le même design ni les mêmes couleurs.</span></li>
+        <li><b>Vos clients vous écrivent sur WhatsApp</b><span>Horaires en direct, prestations, prix, photos, réservation : tout mène à votre WhatsApp.</span></li>
+        <li><b>Gratuit, sans piège</b><span>Sans contrat et sans carte bancaire. Pour partir, un message suffit.</span></li>
+      </ul>
+      <div class="vt-offer"><p class="vt-kick">Offre de lancement Vitrino</p><p><b>Les 50 premiers professionnels de chaque ville deviennent membres fondateurs :</b> la formule Essentiel offerte à vie, et -50 % à vie sur la formule Pro.</p></div>
+      <div class="vt-cta"><a class="btn btn-forest" href="https://vitrino.ma/inscrire/" target="_blank" rel="noopener">Créer ma vitrine gratuite<svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-line" href="https://ritaj-cafe.vitrino.ma/" target="_blank" rel="noopener">Voir un exemple</a></div>
+    </div>
+    <a class="vt-phone" href="https://vitrino.ma/" target="_blank" rel="noopener" aria-label="Découvrir Vitrino"><img src="https://vitrino.ma/img/apercu-vitrine.webp" alt="Une vitrine Vitrino sur téléphone" width="560" height="1100" loading="lazy"></a>
   </div>
 </div></section>
 
