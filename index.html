@@ -253,6 +253,15 @@ footer .soc svg{width:20px; height:20px}
 .way .sl:hover{background:color-mix(in srgb, var(--on-forest) 22%, transparent)}
 .way .sl svg{width:17px; height:17px}
 footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; align-items:center; color:var(--muted); font-size:14.5px}
+.vitrino{display:flex;gap:20px 32px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;padding:26px 28px;border-radius:22px;background:var(--lime-soft);border:1px solid var(--line)}
+.vitrino>div{flex:1 1 380px;min-width:0}
+.vitrino h3{margin:4px 0 8px;font-family:var(--display);font-size:clamp(20px,2.4vw,26px)}
+.vitrino p{margin:0;color:var(--muted)}
+.vitrino p b{color:var(--ink)}
+.vt-kick{font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--forest-2)!important}
+.vt-url{font-weight:600;color:var(--ink);white-space:nowrap}
+.vitrino .btn{flex:none}
+@media (max-width:600px){.vitrino{padding:22px 18px}.vitrino .btn{width:100%}}
 </style>
 <style>html{-webkit-text-size-adjust:100%;text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
 </head>
@@ -276,7 +285,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
 
 <header class="top"><div class="wrap">
   <a class="logo" href="#haut" aria-label="Vitrine Atlas, accueil"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a>
-  <nav class="links" aria-label="Sections"><a href="#realisations">Exemples</a><a href="#inclus">Inclus</a><a href="#tarifs">Tarifs</a><a href="#methode">Méthode</a><a href="#questions">Questions</a></nav>
+  <nav class="links" aria-label="Sections"><a href="#realisations">Exemples</a><a href="#inclus">Inclus</a><a href="#tarifs">Tarifs</a><a href="#methode">Méthode</a><a href="#questions">Questions</a><a href="https://vitrino.ma/" target="_blank" rel="noopener">Vitrino</a></nav>
   <a class="btn btn-lime btn-sm" href="#contact">Maquette gratuite</a>
 </div></header>
 
@@ -347,7 +356,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
       <a class="shot" href="demos/clinique.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Centre Médical Al Amal"><img src="demos/img/shot-clinique.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Centre Médical Al Amal"></a>
       <div class="tx"><p class="meta"><span class="st">Clinique / centre médical</span><span>Casablanca · bleu canard rassurant</span></p><h3>Centre Médical Al Amal</h3><p>Spécialités, plateau technique en onglets, médecins et prise de rendez-vous.</p>
       <ul><li>Rendez-vous en ligne</li><li>Urgences en évidence</li><li>Mutuelles acceptées</li></ul>
-      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/clinique.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/dentaire/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Clinique dentaire Les Orangers">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Clinique dentaire Les Orangers, un autre style.</p></div>
+      <div class="dbtns"><a class="btn btn-lime btn-sm" href="demos/clinique.html" target="_blank" rel="noopener">Essentiel · 1 page<svg><use href="#i-arrow"/></svg></a><a class="btn btn-out btn-sm" href="demos/complet/dentaire/index.html" target="_blank" rel="noopener" aria-label="Voir la version Complet 5 pages : Cabinet dentaire Les Orangers">Complet · 5 pages<svg><use href="#i-arrow"/></svg></a></div><p class="dalt">Version Complet : Cabinet dentaire Les Orangers, un autre style.</p></div>
     </article>
     <article class="demo">
       <a class="shot" href="demos/opticien.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Optique Lumière"><img src="demos/img/shot-opticien.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Page d’accueil de la démo Optique Lumière"></a>
@@ -396,6 +405,11 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
       <a class="btn btn-line" href="#contact" data-plan="Entretien">Ajouter l’entretien</a></article>
   </div>
   <p class="pnote">Le site vous appartient : à la fin, vous recevez tous les accès, même si vous arrêtez l’entretien.</p>
+  <aside class="vitrino" aria-label="Vitrino, vitrines gratuites au Maroc">
+    <div><p class="vt-kick">Au Maroc · Gratuit</p><h3>Pas encore prêt pour un site sur mesure&nbsp;?</h3>
+      <p>Commencez avec <b>Vitrino</b>, notre service de vitrines en ligne : une page à votre nom (<span class="vt-url">votre-nom.vitrino.ma</span>) avec vos services, vos photos, vos horaires et un bouton WhatsApp. Gratuit, sans contrat et sans carte bancaire.</p></div>
+    <a class="btn btn-forest" href="https://vitrino.ma/inscrire/" target="_blank" rel="noopener">Créer ma vitrine gratuite<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </aside>
 </div></section>
 
 <section class="block" id="methode" style="padding-top:0"><div class="wrap">
@@ -446,7 +460,7 @@ footer .wrap{padding-block:30px; display:flex; flex-wrap:wrap; gap:10px 24px; ju
   </form>
 </div></div></section>
 
-<footer><div class="wrap"><a class="logo" href="#haut" style="font-size:18px"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a><span class="soc"><a href="https://www.facebook.com/profile.php?id=61595675529684" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Facebook"><svg><use href="#i-fb"/></svg></a><a href="https://www.instagram.com/vitrineatlas/" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Instagram"><svg><use href="#i-ig"/></svg></a></span><span>© <span id="yr">2026</span> Vitrine Atlas · Tous droits réservés · Casablanca, Maroc</span></div></footer>
+<footer><div class="wrap"><a class="logo" href="#haut" style="font-size:18px"><svg><use href="#logo"/></svg><span>Vitrine <span class="w">Atlas</span></span></a><span class="soc"><a href="https://www.facebook.com/profile.php?id=61595675529684" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Facebook"><svg><use href="#i-fb"/></svg></a><a href="https://www.instagram.com/vitrineatlas/" target="_blank" rel="noopener" aria-label="Vitrine Atlas sur Instagram"><svg><use href="#i-ig"/></svg></a></span><span>© <span id="yr">2026</span> Vitrine Atlas · Tous droits réservés · Casablanca, Maroc · <a href="https://vitrino.ma/" target="_blank" rel="noopener">Vitrino, vitrines gratuites au Maroc</a></span></div></footer>
 <script>try{document.getElementById("yr").textContent=new Date().getFullYear()}catch(e){}</script>
 
 <script>
